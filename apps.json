@@ -1,0 +1,40 @@
+{
+  "format": "appverse-catalog",
+  "schemaVersion": 1,
+  "apps": [],
+  "categories": [
+    {
+      "id": "productivity",
+      "name": "생산성",
+      "sortOrder": 0
+    },
+    {
+      "id": "tools",
+      "name": "도구",
+      "sortOrder": 1
+    },
+    {
+      "id": "education",
+      "name": "교육",
+      "sortOrder": 2
+    },
+    {
+      "id": "games",
+      "name": "게임",
+      "sortOrder": 3
+    },
+    {
+      "id": "creative",
+      "name": "창작",
+      "sortOrder": 4
+    },
+    {
+      "id": "lifestyle",
+      "name": "라이프",
+      "sortOrder": 5
+    }
+  ],
+  "notices": [],
+  "settings": {},
+  "generatedAt": "2026-11-10T00:00:00+09:00"
+}
