@@ -188,6 +188,50 @@ select.in{background-image:linear-gradient(45deg,transparent 50%,var(--ink-3) 50
 .is-list .info{padding:0;align-items:center}
 .is-list .ico{width:54px;height:54px;border-radius:14px}
 .is-list .fav-btn{top:50%;right:-6px;margin-top:-22px;color:var(--ink-3);filter:none}
+/* ===== 탐색 UI/UX 고도화 & 통합 허브 ===== */
+.explore-hub-page{padding-bottom:50px}
+.explore-quick-stats .stat-pill{display:inline-flex;align-items:center;padding:4px 11px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-pill);font-size:11.5px;color:var(--ink-2);font-weight:700}
+.explore-quick-stats .stat-pill b{color:var(--link);margin-left:3px}
+.explore-type-tabs{display:flex;gap:6px;background:var(--surface);padding:5px;border-radius:16px;border:1px solid var(--line);margin:12px 0 14px;overflow-x:auto;scrollbar-width:none}
+.explore-type-tabs::-webkit-scrollbar{display:none}
+.explore-tab{flex:1;min-width:fit-content;min-height:42px;padding:0 14px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:6px;font-weight:800;font-size:13px;color:var(--ink-3);background:transparent;transition:all var(--t-fast) var(--ease-out);white-space:nowrap;cursor:pointer;border:0}
+.explore-tab:active{transform:scale(.96)}
+.explore-tab.active{background:var(--surface-2);color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.explore-tab .tab-count{display:inline-flex;align-items:center;justify-content:center;padding:2px 7px;border-radius:999px;font-size:11px;font-weight:900;background:var(--line);color:var(--ink-2)}
+.explore-tab.active .tab-count{background:var(--ink);color:var(--bg)}
+.explore-search-area{position:relative;margin-bottom:12px}
+.search-clear-btn{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--surface-2);color:var(--ink-2);display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;border:0;cursor:pointer}
+.search-clear-btn:active{transform:translateY(-50%) scale(.9)}
+.explore-tags-rail{display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none;margin-top:8px;padding:2px 0}
+.explore-tags-rail::-webkit-scrollbar{display:none}
+.tags-lead{font-size:11.5px;font-weight:800;color:var(--ink-3);white-space:nowrap;flex:none}
+.search-tag{display:inline-flex;align-items:center;padding:4px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink-2);font-size:12px;font-weight:700;white-space:nowrap;cursor:pointer;flex:none;transition:background var(--t-fast) linear}
+.search-tag:active{background:var(--surface-2)}
+.explore-context-banner{padding:10px 14px;border-radius:14px;background:color-mix(in srgb,var(--surface) 90%,var(--surface-2));border:1px solid var(--line);margin-bottom:10px}
+.explore-context-banner p{margin:0;font-size:12px;color:var(--ink-2);line-height:1.45}
+.explore-context-banner b{color:var(--ink)}
+
+/* LAB 및 미니게임 카드 스타일 */
+.lab-card-cover,.mini-card-cover{width:100%;aspect-ratio:4/3;border-radius:18px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:inset 0 0 40px rgba(0,0,0,.18);transition:transform var(--t-fast) var(--ease-out)}
+.lab-card-cover{background:radial-gradient(circle at 30% 20%,color-mix(in srgb,var(--card-color,#4b68ed) 85%,#fff),var(--card-color,#4b68ed) 65%,#0f162e)}
+.mini-card-cover{background:radial-gradient(circle at 70% 30%,color-mix(in srgb,var(--card-color,#e2675a) 85%,#fff),var(--card-color,#e2675a) 65%,#151a30)}
+.lab-cover-bubble,.mini-cover-bubble{font-size:42px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35));transition:transform var(--t-mid) var(--ease-out)}
+.app-card:hover .lab-cover-bubble,.app-card:hover .mini-cover-bubble{transform:scale(1.12)}
+.cover-type-tag{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;background:rgba(0,0,0,.48);color:#fff;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.cover-run-hint{position:absolute;bottom:8px;right:8px;font-size:11px;font-weight:900;padding:3px 8px;border-radius:6px;background:rgba(255,255,255,.94);color:#111;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.lab-card-ico,.mini-card-ico{display:grid;place-items:center;font-size:20px;color:#fff}
+.type-url{background:#dce5ff;color:#1c3282}
+.type-lab{background:#d2f4e8;color:#0c5c40}
+.type-mini{background:#ffe4e2;color:#9c221b}
+html[data-theme=dark] .type-url{background:#1f2f66;color:#adc4ff}
+html[data-theme=dark] .type-lab{background:#114232;color:#76eac0}
+html[data-theme=dark] .type-mini{background:#5c1b18;color:#ffadab}
+
+/* 리스트 뷰 적응 */
+.is-list .app-card-lab .lab-card-cover,.is-list .app-card-mini .mini-card-cover{width:54px;height:54px;aspect-ratio:1;border-radius:12px;flex:none}
+.is-list .lab-cover-bubble,.is-list .mini-cover-bubble{font-size:24px}
+.is-list .cover-type-tag,.is-list .cover-run-hint{display:none}
+
 /* ===== 7. 스택 화면·상세 ===== */
 .av-nav{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:2px;background:var(--bg);padding:var(--sat) calc(6px + var(--sar)) 0 calc(6px + var(--sal));height:calc(var(--top-h) + var(--sat))}
 .av-nav h1{flex:1;font-size:17px;font-weight:800;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
@@ -793,7 +837,7 @@ html[data-skin="cosmos"]{--link:#9a76ef;--game:#8b66ef;--accent:#a77cff;--surfac
 'use strict';
 /* ========== 1. 설정 ========== */
 const CONFIG = {
-  VERSION: '2.2.0', SCHEMA: 1,
+  VERSION: '2.3.0', SCHEMA: 1,
   /* 'local' = 정적·로컬 모드. 서버 연동 시 RemoteBackend를 구현한 뒤 'remote'로 변경 */
   MODE: 'local',
   /* 로컬 데모 전용 계정. 공개 코드에 그대로 노출되므로 어떤 보안도 제공하지 않음 */
@@ -1278,7 +1322,19 @@ function badgesOf(app) {
   return o.join('');
 }
 const favBtn = id => { const on = Fav.has(id); return `<button class="fav-btn" type="button" data-act="fav" data-id="${esc(id)}" data-fav="${esc(id)}" aria-pressed="${on}" aria-label="${on ? '즐겨찾기 해제' : '즐겨찾기 추가'}">${ic('heart')}</button>`; };
-const cardHTML = a => `<article class="app-card"><a href="#/app/${esc(a.id)}" data-nav>${imgTag(a, 'thumb', 'cover')}<div class="info">${imgTag(a, 'icon', 'ico')}<div class="txt"><h3>${esc(a.name)}</h3><p>${esc(a.subtitle || a.description)}</p><div class="badges">${badgesOf(a)}</div></div></div></a>${favBtn(a.id)}</article>`;
+const cardHTML = item => {
+  if (item._isLab || item.type === 'lab') {
+    const on = Fav.has('lab:' + item.id);
+    return `<article class="app-card app-card-lab" data-type="lab"><a href="#/lab/${esc(item.id)}" data-nav><div class="cover lab-card-cover" style="--card-color:${item.color || '#4b68ed'}"><div class="lab-cover-bubble">${item.emoji}</div><span class="cover-type-tag">내장 LAB</span><span class="cover-run-hint">실행 ↗</span></div><div class="info"><div class="ico lab-card-ico" style="background:${item.color || '#4b68ed'}">${item.emoji}</div><div class="txt"><h3>${esc(item.name)}</h3><p>${esc(item.desc)}</p><div class="badges"><span class="av-badge type-lab">🧪 내장 LAB</span><span class="av-badge">${esc(item.kind || '오프라인')}</span></div></div></div></a><button class="fav-btn" type="button" data-act="fav" data-id="lab:${esc(item.id)}" data-fav="lab:${esc(item.id)}" aria-pressed="${on}" aria-label="${on ? '즐겨찾기 해제' : '즐겨찾기 추가'}">${ic('heart')}</button></article>`;
+  }
+  if (item._isMini || item.type === 'mini') {
+    const on = Fav.has('mini:' + item.id);
+    return `<article class="app-card app-card-mini" data-type="mini"><a href="#/mini/${esc(item.id)}" data-nav><div class="cover mini-card-cover" style="--card-color:${item.color || '#e2675a'}"><div class="mini-cover-bubble">${item.emoji}</div><span class="cover-type-tag">미니게임</span><span class="cover-run-hint">플레이 ▶</span></div><div class="info"><div class="ico mini-card-ico" style="background:${item.color || '#e2675a'}">${item.emoji}</div><div class="txt"><h3>${esc(item.name)}</h3><p>${esc(item.desc)}</p><div class="badges"><span class="av-badge type-mini">🎮 미니게임</span><span class="av-badge">${esc(item.type)}</span></div></div></div></a><button class="fav-btn" type="button" data-act="fav" data-id="mini:${esc(item.id)}" data-fav="mini:${esc(item.id)}" aria-pressed="${on}" aria-label="${on ? '즐겨찾기 해제' : '즐겨찾기 추가'}">${ic('heart')}</button></article>`;
+  }
+  const on = Fav.has(item.id);
+  const cat = Repo.cat(item.categoryId);
+  return `<article class="app-card app-card-url" data-type="url"><a href="#/app/${esc(item.id)}" data-nav>${imgTag(item, 'thumb', 'cover')}<div class="info">${imgTag(item, 'icon', 'ico')}<div class="txt"><h3>${esc(item.name)}</h3><p>${esc(item.subtitle || item.description)}</p><div class="badges"><span class="av-badge type-url">🌐 URL 웹앱</span>${cat ? `<span class="av-badge">${esc(cat.name)}</span>` : ''}${badgesOf(item)}</div></div></div></a><button class="fav-btn" type="button" data-act="fav" data-id="${esc(item.id)}" data-fav="${esc(item.id)}" aria-pressed="${on}" aria-label="${on ? '즐겨찾기 해제' : '즐겨찾기 추가'}">${ic('heart')}</button></article>`;
+};
 const tileHTML = a => `<a class="tile" href="#/app/${esc(a.id)}" data-nav>${imgTag(a, 'icon', '')}<b>${esc(a.name)}</b><span>${esc(Repo.cat(a.categoryId)?.name || a.subtitle)}</span></a>`;
 const ORB = `<svg class="orb" viewBox="0 0 92 92" aria-hidden="true"><ellipse cx="46" cy="46" rx="42" ry="16" fill="none" stroke="var(--line)" stroke-width="3" transform="rotate(-28 46 46)"/><circle cx="46" cy="46" r="17" fill="var(--surface-2)"/></svg>`;
 const emptyHTML = (title, body, action = '') => `<div class="empty">${ORB}<h3>${esc(title)}</h3><p>${esc(body)}</p>${action}</div>`;
@@ -1446,7 +1502,84 @@ const viewHome = el => {
   if(Repo.settings.home.notices&&notices.length){html+=`<section class="sec home-section"><div class="sec-head"><h2>공지사항</h2></div><div class="rows">${notices.slice(0,2).map(n=>`<button class="row-item" type="button" data-act="notice" data-id="${esc(n.id)}"><span class="grow"><b>${esc(n.title)}</b><span class="sub">${fmtDate(n.createdAt)}</span></span>${ic('next')}</button>`).join('')}</div></section>`;}
   el.innerHTML=html+'</div>';
 };
-const exploreState = () => { const S = Repo.settings, e = Prefs.data.explore; const st = { q: e.q || '', cat: e.cat || '', sort: e.sort || S.defaultSort, view: e.view || S.defaultView }; if (st.sort === 'popular' && !Repo.hasPopularity()) st.sort = S.defaultSort; if (st.cat && !Repo.cat(st.cat)) st.cat = ''; return st; };
+const exploreState = () => { const S = Repo.settings, e = Prefs.data.explore || {}; const st = { q: e.q || '', type: e.type || 'all', cat: e.cat || '', sort: e.sort || S.defaultSort, view: e.view || S.defaultView }; if (st.sort === 'popular' && !Repo.hasPopularity()) st.sort = S.defaultSort; return st; };
+function getAllExploreItems() {
+  const urls = Repo.publicApps().map(a => Object.assign({
+    type: 'url',
+    _isUrl: true,
+    title: a.name,
+    categoryName: Repo.cat(a.categoryId)?.name || '웹앱',
+    searchTokens: (a.name + ' ' + (a.subtitle || '') + ' ' + (a.description || '') + ' ' + (a.tags || []).join(' ') + ' ' + (Repo.cat(a.categoryId)?.name || '')).toLowerCase()
+  }, a));
+
+  const labs = LAB_APPS.map(l => ({
+    id: l.id,
+    name: l.name,
+    subtitle: l.kind,
+    desc: l.desc,
+    description: l.desc,
+    emoji: l.emoji,
+    color: l.color,
+    kind: l.kind,
+    type: 'lab',
+    _isLab: true,
+    categoryId: (l.id === 'orbit' || l.id === 'pocket') ? 'productivity' : (l.id === 'budget' || l.id === 'gravity') ? 'tools' : (l.id === 'planet' || l.id === 'echo' || l.id === 'pattern') ? 'creative' : 'games',
+    categoryName: (l.id === 'orbit' || l.id === 'pocket') ? '생산성' : (l.id === 'budget' || l.id === 'gravity') ? '도구' : (l.id === 'planet' || l.id === 'echo' || l.id === 'pattern') ? '창작' : '게임',
+    tags: [l.kind, 'LAB', '내장', '오프라인'],
+    searchTokens: (l.name + ' ' + l.desc + ' ' + l.kind + ' lab 내장 오프라인').toLowerCase()
+  }));
+
+  const minis = MINI_GAMES.map(m => ({
+    id: m.id,
+    name: m.name,
+    subtitle: m.type,
+    desc: m.desc,
+    description: m.desc,
+    emoji: m.emoji,
+    color: m.color,
+    type: 'mini',
+    _isMini: true,
+    categoryId: 'games',
+    categoryName: '게임',
+    tags: [m.type, '미니게임', '아케이드'],
+    searchTokens: (m.name + ' ' + m.desc + ' ' + m.type + ' 게임 아케이드 미니').toLowerCase()
+  }));
+
+  return { urls, labs, minis, all: [...urls, ...labs, ...minis] };
+}
+
+function filterExplore(data, st) {
+  let list = data.all;
+  if (st.type === 'url') list = data.urls;
+  else if (st.type === 'lab') list = data.labs;
+  else if (st.type === 'mini') list = data.minis;
+
+  if (st.cat) {
+    list = list.filter(x => x.categoryId === st.cat || (x.type === 'mini' && (x.subtitle || '').includes(st.cat)));
+  }
+
+  if (st.q) {
+    const tokens = st.q.toLowerCase().split(/\s+/).filter(Boolean);
+    list = list.filter(item => tokens.every(t => (item.searchTokens || `${item.name} ${item.desc || ''} ${item.subtitle || ''}`).toLowerCase().includes(t)));
+  }
+
+  return list.sort((a, b) => {
+    if (st.sort === 'name') return a.name.localeCompare(b.name, 'ko');
+    if (st.sort === 'popular') {
+      const pA = a.launchCount || (a._isLab ? 80 : a._isMini ? 50 : 0);
+      const pB = b.launchCount || (b._isLab ? 80 : b._isMini ? 50 : 0);
+      return pB - pA;
+    }
+    if (st.sort === 'updated' && a.updatedAt && b.updatedAt) {
+      return new Date(b.updatedAt) - new Date(a.updatedAt);
+    }
+    if (a.createdAt && b.createdAt) {
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    }
+    return 0;
+  });
+}
+
 function filterApps(list, st) {
   const tokens = st.q.toLowerCase().split(/\s+/).filter(Boolean);
   return list.filter(a => (!st.cat || a.categoryId === st.cat) && tokens.every(t => (`${a.name} ${a.subtitle} ${a.description} ${a.tags.join(' ')} ${Repo.cat(a.categoryId)?.name || ''}`).toLowerCase().includes(t))).sort(SORTERS[st.sort] || SORTERS.latest);
@@ -1458,34 +1591,107 @@ function appendPaged(el, list, grid) {
 }
 const Explore = {
   chips(el) {
-    const st = exploreState(), apps = Repo.publicApps();
-    $('.cat-chips', el).innerHTML = `<button class="chip" type="button" data-act="set-cat" data-id="" aria-pressed="${!st.cat}">전체 <small>${apps.length}</small></button>` + Repo.categories.map(c => `<button class="chip" type="button" data-act="set-cat" data-id="${esc(c.id)}" aria-pressed="${st.cat === c.id}">${esc(c.name)} <small>${apps.filter(a => a.categoryId === c.id).length}</small></button>`).join('');
+    const st = exploreState(), data = getAllExploreItems();
+    let baseList = data.all;
+    if (st.type === 'url') baseList = data.urls;
+    else if (st.type === 'lab') baseList = data.labs;
+    else if (st.type === 'mini') baseList = data.minis;
+
+    let catsHTML = `<button class="chip" type="button" data-act="set-cat" data-id="" aria-pressed="${!st.cat}">전체 <small>${baseList.length}</small></button>`;
+
+    if (st.type === 'mini') {
+      const genres = [
+        { id: '반응속도', name: '⚡ 반응속도' },
+        { id: '기억력', name: '🧠 기억력' },
+        { id: '관찰력', name: '🎨 관찰력' },
+        { id: '퍼즐', name: '🧩 퍼즐' },
+        { id: '전략', name: '♟️ 전략' },
+        { id: '스피드', name: '👆 순발력' },
+        { id: '힐링', name: '🫧 힐링' }
+      ];
+      genres.forEach(g => {
+        const count = data.minis.filter(m => (m.subtitle || '').includes(g.id)).length;
+        if (count > 0) {
+          catsHTML += `<button class="chip" type="button" data-act="set-cat" data-id="${esc(g.id)}" aria-pressed="${st.cat === g.id}">${g.name} <small>${count}</small></button>`;
+        }
+      });
+    } else {
+      Repo.categories.forEach(c => {
+        const count = baseList.filter(a => a.categoryId === c.id).length;
+        if (count > 0) {
+          catsHTML += `<button class="chip" type="button" data-act="set-cat" data-id="${esc(c.id)}" aria-pressed="${st.cat === c.id}">${esc(c.name)} <small>${count}</small></button>`;
+        }
+      });
+    }
+    $('.cat-chips', el).innerHTML = catsHTML;
   },
   results(el) {
-    const st = exploreState(), all = Repo.publicApps(), list = filterApps(all, st), grid = $('.app-grid', el);
-    $('.count', el).textContent = `${list.length}개의 웹앱`;
+    const st = exploreState(), data = getAllExploreItems(), list = filterExplore(data, st), grid = $('.app-grid', el);
+    const unitName = st.type === 'url' ? '개의 웹앱' : st.type === 'lab' ? '개의 내장 LAB' : st.type === 'mini' ? '개의 미니게임' : '개의 전체 체험';
+    $('.count', el).textContent = `${list.length}${unitName}`;
     grid.classList.toggle('is-list', st.view === 'list');
     const hold = $('.exp-empty', el);
-    if (!list.length) { grid.innerHTML = ''; el._io?.disconnect(); hold.innerHTML = all.length ? emptyHTML('조건에 맞는 웹앱이 없어요', '검색어를 줄이거나 다른 카테고리를 선택해 보세요.', '<button class="av-btn" type="button" data-act="clear-filter">조건 지우기</button>') : emptyHTML('아직 등록된 웹앱이 없어요', '웹앱이 등록되면 이곳에서 찾아볼 수 있습니다.'); }
-    else { hold.innerHTML = ''; appendPaged(el, list, grid); }
+    if (!list.length) {
+      grid.innerHTML = ''; el._io?.disconnect();
+      hold.innerHTML = emptyHTML('조건에 맞는 체험이 없어요', '검색어를 줄이거나 상단 유형 탭/카테고리를 변경해 보세요.', '<button class="av-btn" type="button" data-act="clear-filter">조건 지우기</button>');
+    } else {
+      hold.innerHTML = ''; appendPaged(el, list, grid);
+    }
   },
-  sortOptions(st) { const o = [['latest', '최신순'], ['name', '이름순'], ['updated', '최근 업데이트순'], ['manual', '게시 순서']]; if (Repo.hasPopularity()) o.push(['popular', '인기순']); return o.map(([v, t]) => `<option value="${v}" ${st.sort === v ? 'selected' : ''}>${t}</option>`).join(''); },
+  sortOptions(st) {
+    const o = [['latest', '최신순'], ['name', '이름순'], ['updated', '최근 업데이트순'], ['manual', '게시 순서']];
+    if (Repo.hasPopularity()) o.push(['popular', '인기순']);
+    return o.map(([v, t]) => `<option value="${v}" ${st.sort === v ? 'selected' : ''}>${t}</option>`).join('');
+  },
   render(el) {
-    const st = exploreState();
-    el.innerHTML = `<div class="page"><div class="explore-hub-head"><span class="home-eyebrow">DISCOVER APPVERSE ✳</span><h1>탐색</h1><p>URL 웹앱부터 내장 LAB, 미니 체험실까지 한곳에서 만나보세요.</p></div>
-    <nav class="explore-entry-list" aria-label="체험 카테고리"><button type="button" class="explore-entry explore-entry-url" data-act="explore-jump" aria-label="URL 웹앱 목록으로 이동"><span class="explore-entry-icon">🌐</span><span><b>URL 웹앱</b><small>등록된 공개 웹앱 ${Repo.publicApps().length}개</small></span><span class="explore-entry-arrow">↓</span></button><a class="explore-entry explore-entry-lab" href="#/lab" data-nav><span class="explore-entry-icon">🧪</span><span><b>내장 웹앱</b><small>외부 URL 없이 실행하는 LAB ${LAB_APPS.length}종</small></span><span class="explore-entry-arrow">↗</span></a><a class="explore-entry explore-entry-mini" href="#/mini" data-nav><span class="explore-entry-icon">🎮</span><span><b>미니 체험실</b><small>바로 즐기는 미니게임 ${MINI_GAMES.length}종</small></span><span class="explore-entry-arrow">↗</span></a></nav>
-    <section id="explore-url-list" class="explore-url-section"><div class="home-activity-title"><h2>🌐 URL 웹앱 둘러보기</h2><span>${Repo.publicApps().length}개</span></div><div class="search-wrap">${ic('search')}<input class="in" id="exploreQ" type="search" enterkeyhint="search" placeholder="이름, 설명, 태그로 검색" aria-label="웹앱 검색" data-input="explore-q" value="${esc(st.q)}" autocomplete="off"></div>
-    <div class="rail cat-chips" style="margin-top:10px" role="group" aria-label="카테고리"></div>
-    <div class="tools"><span class="count" aria-live="polite"></span><div class="d-flex gap-1 align-items-center"><select class="in sort-sel" aria-label="정렬" data-change="explore-sort">${this.sortOptions(st)}</select><button class="icon-btn view-toggle" type="button" data-act="toggle-view" aria-label="보기 방식 전환">${ic(st.view === 'list' ? 'grid' : 'rows')}</button></div></div>
-    <div class="app-grid"></div><div class="exp-empty"></div><div class="sentinel" style="height:1px"></div></section></div>`;
+    const st = exploreState(), data = getAllExploreItems();
+    el.innerHTML = `<div class="page explore-hub-page">
+      <div class="explore-hub-head">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <div><span class="home-eyebrow">DISCOVER APPVERSE ✳</span><h1>탐색</h1></div>
+          <div class="explore-quick-stats"><span class="stat-pill">총 <b>${data.all.length}</b>개 체험</span></div>
+        </div>
+        <p class="explore-hub-desc">URL 웹앱부터 오프라인 LAB, 54종 미니게임까지 한곳에서 바로 탐색하고 실행하세요.</p>
+      </div>
+      <div class="explore-type-tabs" role="tablist" aria-label="체험 유형">
+        <button type="button" class="explore-tab ${st.type === 'all' ? 'active' : ''}" data-act="set-type" data-type="all" role="tab" aria-selected="${st.type === 'all'}"><span class="tab-label">전체</span><span class="tab-count">${data.all.length}</span></button>
+        <button type="button" class="explore-tab ${st.type === 'url' ? 'active' : ''}" data-act="set-type" data-type="url" role="tab" aria-selected="${st.type === 'url'}"><span class="tab-label">🌐 URL 웹앱</span><span class="tab-count">${data.urls.length}</span></button>
+        <button type="button" class="explore-tab ${st.type === 'lab' ? 'active' : ''}" data-act="set-type" data-type="lab" role="tab" aria-selected="${st.type === 'lab'}"><span class="tab-label">🧪 내장 LAB</span><span class="tab-count">${data.labs.length}</span></button>
+        <button type="button" class="explore-tab ${st.type === 'mini' ? 'active' : ''}" data-act="set-type" data-type="mini" role="tab" aria-selected="${st.type === 'mini'}"><span class="tab-label">🎮 미니게임</span><span class="tab-count">${data.minis.length}</span></button>
+      </div>
+      <div class="explore-search-area">
+        <div class="search-wrap">${ic('search')}<input class="in" id="exploreQ" type="search" enterkeyhint="search" placeholder="${st.type === 'url' ? 'URL 웹앱 검색 (이름, 설명, 태그)' : st.type === 'lab' ? '내장 LAB 검색 (이름, 도구, 시뮬)' : st.type === 'mini' ? '54종 미니게임 검색 (이름, 장르)' : '전체 72개 체험 통합 검색'}" aria-label="체험 검색" data-input="explore-q" value="${esc(st.q)}" autocomplete="off">${st.q ? `<button type="button" class="search-clear-btn" data-act="clear-q" aria-label="검색어 지우기">✕</button>` : ''}</div>
+        <div class="explore-tags-rail" role="group" aria-label="추천 키워드">
+          <span class="tags-lead">추천:</span>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="타이핑">🏎️ 타이핑</button>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="가계부">💳 가계부</button>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="행성">🪐 행성</button>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="물류">📦 WMS물류</button>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="스도쿠">🔢 스도쿠</button>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="2048">🔲 2048</button>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="반응속도">⚡ 반응속도</button>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="노트">📝 노트</button>
+          <button type="button" class="search-tag" data-act="tag-q" data-q="POS">🏪 POS</button>
+        </div>
+      </div>
+      <div class="explore-context-banner">
+        ${st.type === 'all' ? '<p><span>✨</span> <b>전체 72개 체험 허브</b> · 웹앱, 오프라인 LAB, 54개 미니게임을 한눈에 보고 바로 실행하세요.</p>' :
+          st.type === 'url' ? '<p><span>🌐</span> <b>공개 URL 웹앱</b> · 브라우저에서 바로 체험하는 실배포 포트폴리오 및 웹앱 목록입니다.</p>' :
+          st.type === 'lab' ? '<p><span>🧪</span> <b>내장 LAB 실험실</b> · 외부 링크나 인터넷 없이 APPVERSE 안에서 100% 로컬로 안전하게 실행됩니다.</p>' :
+          '<p><span>🎮</span> <b>미니 아케이드</b> · 30초 안에 가볍게 즐기는 순발력, 두뇌, 기억력, 퍼즐 54종 미니게임 모음입니다.</p>'}
+      </div>
+      <div class="rail cat-chips" style="margin-top:10px" role="group" aria-label="카테고리"></div>
+      <div class="tools"><span class="count" aria-live="polite"></span><div class="d-flex gap-1 align-items-center"><select class="in sort-sel" aria-label="정렬" data-change="explore-sort">${this.sortOptions(st)}</select><button class="icon-btn view-toggle" type="button" data-act="toggle-view" aria-label="보기 방식 전환">${ic(st.view === 'list' ? 'grid' : 'rows')}</button></div></div>
+      <div class="app-grid"></div><div class="exp-empty"></div><div class="sentinel" style="height:1px"></div></div>`;
     el._cleanup = () => el._io?.disconnect();
     this.chips(el); this.results(el);
   },
   update(el) { $('.sort-sel', el).innerHTML = this.sortOptions(exploreState()); this.chips(el); this.results(el); }
 };
 const viewFav = el => {
-  const list = Repo.publicApps().filter(a => Fav.has(a.id));
-  el.innerHTML = `<div class="page"><h1 class="lede" style="font-size:30px">즐겨찾기</h1>${list.length ? `<div class="app-grid">${list.map(cardHTML).join('')}</div>` : emptyHTML('즐겨찾기한 웹앱이 없어요', '웹앱의 하트를 누르면 이 기기에 모아 둡니다.', '<a class="av-btn" href="#/explore" data-nav>웹앱 둘러보기</a>')}</div>`;
+  const allData = getAllExploreItems().all;
+  const list = allData.filter(a => Fav.has(a.id) || Fav.has('lab:' + a.id) || Fav.has('mini:' + a.id));
+  el.innerHTML = `<div class="page"><div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"><h1 class="lede" style="font-size:30px;margin:0">즐겨찾기</h1>${list.length ? `<span class="stat-pill"><b>${list.length}</b>개 보관됨</span>` : ''}</div>${list.length ? `<div class="app-grid">${list.map(cardHTML).join('')}</div>` : emptyHTML('즐겨찾기한 체험이 없어요', '웹앱, 내장 LAB, 미니게임의 하트를 누르면 이 기기에 모아 둡니다.', '<a class="av-btn" href="#/explore" data-nav>체험 둘러보기</a>')}</div>`;
 };
 const viewMore = el => {
   const S = Repo.settings, mode = Theme.mode(), notices = Repo.publicNotices(), admin = Auth.valid();
@@ -2655,9 +2861,45 @@ const A = {
   'modal-close'() { Modal.close(); },
   'modal-ok'() { Modal.top().result = true; Modal.close(); },
   fav(el) { const on = Fav.toggle(el.dataset.id); toast(on ? '즐겨찾기에 추가했습니다.' : '즐겨찾기에서 해제했습니다.', { ms: 1600 }); },
-  'go-cat'(el) { Prefs.data.explore.cat = el.dataset.id; Prefs.data.explore.q = ''; Prefs.save(); const v = Router.cache.get('/explore'); if (v) { $('#exploreQ', v.el).value = ''; Explore.update(v.el); } Router.go('/explore'); },
+
+  'set-type'(el) {
+    Prefs.data.explore.type = el.dataset.type;
+    Prefs.data.explore.cat = '';
+    Prefs.save();
+    const v = Router.active.el;
+    Explore.render(v);
+  },
+  'clear-q'() {
+    Prefs.data.explore.q = '';
+    Prefs.save();
+    const v = Router.active.el;
+    const inp = $('#exploreQ', v);
+    if (inp) inp.value = '';
+    Explore.render(v);
+  },
+  'tag-q'(el) {
+    const q = el.dataset.q || '';
+    Prefs.data.explore.q = q;
+    Prefs.save();
+    const v = Router.active.el;
+    const inp = $('#exploreQ', v);
+    if (inp) inp.value = q;
+    Explore.results(v);
+    const clearBtn = $('.search-clear-btn', v);
+    if (clearBtn) clearBtn.hidden = !q;
+    else Explore.render(v);
+  },
+  'go-cat'(el) {
+    Prefs.data.explore.type = 'all';
+    Prefs.data.explore.cat = el.dataset.id;
+    Prefs.data.explore.q = '';
+    Prefs.save();
+    const v = Router.cache.get('/explore');
+    if (v) { const inp = $('#exploreQ', v.el); if (inp) inp.value = ''; Explore.render(v.el); }
+    Router.go('/explore');
+  },
   'set-cat'(el) { Prefs.data.explore.cat = el.dataset.id; Prefs.save(); const v = Router.active.el; Explore.chips(v); Explore.results(v); },
-  'clear-filter'() { Object.assign(Prefs.data.explore, { q: '', cat: '' }); Prefs.save(); const v = Router.active.el; $('#exploreQ', v).value = ''; Explore.chips(v); Explore.results(v); },
+  'clear-filter'() { Object.assign(Prefs.data.explore, { q: '', cat: '', type: 'all' }); Prefs.save(); const v = Router.active.el; Explore.render(v); },
   'toggle-view'(el) { const st = exploreState(); Prefs.data.explore.view = st.view === 'list' ? 'grid' : 'list'; Prefs.save(); el.innerHTML = ic(Prefs.data.explore.view === 'list' ? 'grid' : 'rows'); Explore.results(Router.active.el); },
   notice(el) { const n = Repo.notices.find(x => x.id === el.dataset.id); if (n) Modal.open(`${sheetHead(n.title)}<p class="hint mb-2">${fmtDate(n.createdAt)}</p><p class="prose selectable">${esc(n.body)}</p>`, { label: n.title }); },
   help() { openHelp(); },
