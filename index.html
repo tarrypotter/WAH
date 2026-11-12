@@ -355,6 +355,15 @@ html[data-theme=dark] .av-toast.err{color:#2a0610}
 .mini-aim-zone{height:min(57vh,400px);min-height:290px;position:relative;background:radial-gradient(circle,var(--surface-2) 1px,transparent 1px);background-size:23px 23px;border:1px solid var(--line);border-radius:16px;overflow:hidden;touch-action:manipulation}
 .mini-aim-target{position:absolute;width:62px;height:62px;border-radius:50%;background:radial-gradient(circle,#fff 0 14%,#e64f52 16% 33%,#fff 35% 51%,#e64f52 53%);border:2px solid #a53134;box-shadow:0 3px 10px #0002;touch-action:manipulation}
 
+/* ===== 10 extra game layouts ===== */
+.mini-tap-pad{width:100%;min-height:290px;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(155deg,#6655d8,#9476f2);color:white;touch-action:manipulation;gap:9px}.mini-tap-pad strong{font-size:clamp(70px,20vw,110px);font-weight:900;line-height:1}.mini-tap-pad small,.mini-tap-pad span{font-size:14px;font-weight:700}
+.mini-simon-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:370px;margin:16px auto}.mini-simon-grid button{height:135px;border-radius:20px;background:var(--simon);opacity:.65;box-shadow:inset 0 -8px 0 #0002;transition:opacity .12s,transform .12s}.mini-simon-grid button.lit{opacity:1;transform:scale(1.05);box-shadow:0 0 25px var(--simon)}
+.mini-math-question{text-align:center;font-size:clamp(36px,10vw,62px);font-weight:900;padding:45px 0 35px}.mini-math-options,.mini-stroop-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mini-math-options button,.mini-stroop-options button{min-height:70px;border-radius:14px;background:var(--surface-2);font-size:23px;font-weight:850}.mini-math-options button:active,.mini-stroop-options button:active{background:var(--game);color:white}
+.mini-number-prompt{text-align:center;font-size:75px;margin:15px auto}.mini-center{text-align:center;font-size:20px;font-weight:800}.mini-guess-form,.mini-word-form{display:flex;gap:8px;align-items:center;margin:20px 0}.mini-guess-form .mini-main-btn,.mini-word-form .mini-main-btn{width:100px;margin:0;padding:12px 10px}.mini-guess-form input,.mini-word-form input{min-width:0;flex:1}
+.mini-2048-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:#b5a99a;border-radius:14px;padding:7px;touch-action:none;max-width:430px;margin:auto}.mini-2048-cell{aspect-ratio:1;display:grid;place-items:center;border-radius:7px;background:#cdc1b4;font-weight:900;font-size:clamp(17px,5vw,32px);color:#675b4e}.mini-2048-cell.v2{background:#eee4da}.mini-2048-cell.v4{background:#ede0c8}.mini-2048-cell.v8{background:#f2b179;color:white}.mini-2048-cell.v16,.mini-2048-cell.v32,.mini-2048-cell.v64{background:#f59563;color:white}.mini-2048-cell.v128,.mini-2048-cell.v256,.mini-2048-cell.v512,.mini-2048-cell.v1024,.mini-2048-cell.v2048{background:#edc950;color:white;font-size:clamp(13px,4vw,24px)}.mini-directions{text-align:center;margin-top:14px}.mini-directions button{width:55px;height:46px;background:var(--surface-2);border-radius:10px;margin:2px;font-size:21px;font-weight:800}
+.mini-tic-grid,.mini-slide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:330px;margin:20px auto}.mini-tic-grid button,.mini-slide-grid button{aspect-ratio:1;background:var(--surface-2);border-radius:13px;font-size:clamp(36px,11vw,60px);font-weight:900}.mini-tic-grid button{color:var(--game)}.mini-slide-grid button{font-size:clamp(25px,9vw,45px);color:var(--ink)}.mini-slide-grid button.empty{background:transparent;opacity:.2}
+.mini-word{text-align:center;letter-spacing:.15em;font-size:clamp(28px,9vw,53px);font-weight:900;margin:45px 0 24px;overflow-wrap:anywhere;color:var(--game)}.mini-stroop-word{text-align:center;font-size:clamp(64px,20vw,110px);font-weight:900;margin:32px 0}.mini-stroop-options button{font-size:18px}.mini-clock-display{text-align:center;font-size:clamp(64px,17vw,98px);font-weight:900;letter-spacing:-.05em;margin:32px 0}.mini-clock-display small{font-size:18px;margin-left:5px}
+
 </style>
 </head>
 <body>
@@ -1292,7 +1301,7 @@ const viewMore = el => {
   const S = Repo.settings, mode = Theme.mode(), notices = Repo.publicNotices(), admin = Auth.valid();
   el.innerHTML = `<div class="page narrow"><h1 class="lede" style="font-size:30px">전체</h1>
   ${admin ? `<section class="sec" style="margin-top:8px"><div class="rows"><a class="row-item" href="#/admin" data-nav><span class="grow"><b>관리 센터</b><span class="sub">데모 모드로 로그인됨</span></span>${ic('next')}</a><button class="row-item" type="button" data-act="logout"><span class="grow"><b>로그아웃</b></span></button></div></section>` : ''}
-  <section class="sec"><div class="sec-head"><h2>미니 체험실</h2></div><div class="rows"><a class="row-item" href="#/mini" data-nav><span class="grow"><b>6개 미니게임 바로 하기</b><span class="sub">반응속도 · 색 찾기 · 기억력 · 뽁뽁이 · 룰렛 · 에임</span></span>${ic('next')}</a></div></section>
+  <section class="sec"><div class="sec-head"><h2>미니 체험실</h2></div><div class="rows"><a class="row-item" href="#/mini" data-nav><span class="grow"><b>16개 미니게임 바로 하기</b><span class="sub">반응속도 · 기억력 · 2048 · 두뇌게임 · 룰렛 외 11종</span></span>${ic('next')}</a></div></section>
   <section class="sec"><div class="sec-head"><h2>화면 테마</h2></div><div class="seg" role="group" aria-label="테마">${[['system', '시스템'], ['light', '라이트'], ['dark', '다크']].map(([v, t]) => `<button type="button" data-act="theme" data-v="${v}" aria-pressed="${mode === v}">${t}</button>`).join('')}</div></section>
   <section class="sec"><div class="sec-head"><h2>공지사항</h2></div>${notices.length ? `<div class="rows">${notices.map(n => `<button class="row-item" type="button" data-act="notice" data-id="${esc(n.id)}"><span class="grow"><b>${esc(n.title)}</b><span class="sub">${fmtDate(n.createdAt)}</span></span>${ic('next')}</button>`).join('')}</div>` : '<p class="hint">등록된 공지사항이 없습니다.</p>'}</section>
   <section class="sec"><div class="sec-head"><h2>도움말</h2></div><div class="rows"><button class="row-item" type="button" data-act="help"><span class="grow"><b>사용 방법 다시 보기</b></span>${ic('next')}</button></div></section>
@@ -1648,7 +1657,17 @@ const MINI_GAMES = [
   {id:'memo',name:'MEMO',desc:'순간적으로 나타난 숫자를 기억해',emoji:'🧠',color:'#ec7998',type:'기억력'},
   {id:'pop',name:'POP IT',desc:'누를수록 시원한 무한 뽁뽁이',emoji:'🫧',color:'#4b9de8',type:'힐링'},
   {id:'pick',name:'PICK',desc:'선택이 어려울 땐 룰렛 한 번',emoji:'🎯',color:'#ee9b43',type:'결정 도구'},
-  {id:'aim',name:'AIM LAB',desc:'30초간 나타나는 표적을 터치',emoji:'🎮',color:'#e2675a',type:'정확도'}
+  {id:'aim',name:'AIM LAB',desc:'30초간 나타나는 표적을 터치',emoji:'🎮',color:'#e2675a',type:'정확도'},
+  {id:'tap',name:'TAP RUSH',desc:'10초 안에 얼마나 빨리 누를까?',emoji:'👆',color:'#8262ec',type:'스피드'},
+  {id:'simon',name:'SIMON',desc:'빛나는 색깔 순서를 따라 눌러',emoji:'🧩',color:'#cf799a',type:'패턴 기억'},
+  {id:'math',name:'QUICK MATH',desc:'30초 동안 암산 문제 풀기',emoji:'➕',color:'#459ab1',type:'암산'},
+  {id:'higher',name:'HIGH LOW',desc:'숨겨진 숫자를 UP DOWN으로 추리',emoji:'🔢',color:'#c58637',type:'숫자 추리'},
+  {id:'merge',name:'2048',desc:'같은 숫자를 합쳐 2048 만들기',emoji:'🔲',color:'#b47a42',type:'퍼즐'},
+  {id:'tictac',name:'TIC TAC TOE',desc:'컴퓨터와 즐기는 3×3 한판 승부',emoji:'⭕',color:'#6599c8',type:'전략'},
+  {id:'slide',name:'SLIDE 8',desc:'뒤섞인 타일을 제자리로 옮겨',emoji:'🧱',color:'#74a65f',type:'슬라이드 퍼즐'},
+  {id:'word',name:'WORD MIX',desc:'뒤섞인 영어 단어 복원하기',emoji:'🔤',color:'#d27e6d',type:'단어'},
+  {id:'stroop',name:'STROOP',desc:'단어 말고 실제 글자 색깔 맞히기',emoji:'🌈',color:'#a66dbd',type:'인지력'},
+  {id:'clock',name:'10 SEC',desc:'마음속으로 정확히 10초 세기',emoji:'⏱️',color:'#4d9e93',type:'시간 감각'}
 ];
 const MINI_STORE = 'appverse.mini.v1';
 const MiniSave = {
@@ -1658,15 +1677,98 @@ const MiniSave = {
   set(k,v){this.data[k]=v;this.persist();},
   persist(){try{localStorage.setItem(MINI_STORE,JSON.stringify(this.data));}catch{}}
 };
-const miniCard = (g,i) => `<a class="mini-card" href="#/mini/${g.id}" data-nav style="--game:${g.color}"><div class="mini-emblem">${g.emoji}</div><div class="mini-card-content"><span class="mini-index">0${i+1} / MINI APP</span><b>${g.name}</b><span>${g.desc}</span></div><span class="mini-arrow">↗</span></a>`;
-const miniHomeSection = () => `<section class="sec mini-home-section"><div class="sec-head"><h2>잠깐 놀아볼까?</h2><a href="#/mini" data-nav>6개 모두 보기</a></div><p class="mini-subtitle">설치 없이 바로 즐기는 APPVERSE 미니 체험실</p><div class="mini-scroll">${MINI_GAMES.map(miniCard).join('')}</div></section>`;
+const miniCard = (g,i) => `<a class="mini-card" href="#/mini/${g.id}" data-nav style="--game:${g.color}"><div class="mini-emblem">${g.emoji}</div><div class="mini-card-content"><span class="mini-index">0${String(i+1).padStart(2,'0')} / MINI APP</span><b>${g.name}</b><span>${g.desc}</span></div><span class="mini-arrow">↗</span></a>`;
+const miniHomeSection = () => `<section class="sec mini-home-section"><div class="sec-head"><h2>잠깐 놀아볼까?</h2><a href="#/mini" data-nav>16개 모두 보기</a></div><p class="mini-subtitle">설치 없이 바로 즐기는 APPVERSE 미니 체험실</p><div class="mini-scroll">${MINI_GAMES.map(miniCard).join('')}</div></section>`;
 const viewMiniLobby = el => {
-  el.innerHTML = navbar('미니 체험실','/')+`<div class="page"><div class="mini-lobby-hero"><span class="mini-overline">APPVERSE / MINI ARCADE</span><h1>가볍게 눌러보고<br>재미있게 즐겨봐.</h1><p>서버와 로그인 없이 바로 시작하는 6개의 작은 실험.</p><span class="mini-hero-stat">6 GAMES · FREE PLAY</span></div><div class="mini-grid">${MINI_GAMES.map(miniCard).join('')}</div><p class="hint mt-3">기록과 룰렛 항목은 현재 브라우저에만 저장됩니다.</p></div>`;
+  el.innerHTML = navbar('미니 체험실','/')+`<div class="page"><div class="mini-lobby-hero"><span class="mini-overline">APPVERSE / MINI ARCADE</span><h1>가볍게 눌러보고<br>재미있게 즐겨봐.</h1><p>서버와 로그인 없이 바로 시작하는 16개의 작은 실험.</p><span class="mini-hero-stat">16 GAMES · FREE PLAY</span></div><div class="mini-grid">${MINI_GAMES.map(miniCard).join('')}</div><p class="hint mt-3">기록과 룰렛 항목은 현재 브라우저에만 저장됩니다.</p></div>`;
 };
+/* ========== MINI ARCADE EXPANSION: 10 more self-contained games ========== */
+function miniExtra(root,id,{later,every,button,bestText,vibration}){
+  let click=()=>{},cleanup=()=>{};
+  const btn=(label,act='start')=>button(label,act);
+  const result=(icon,title,num,desc,act='restart')=>{root.innerHTML=`<div class="mini-result"><span>${icon}</span><small>${title}</small><strong>${num}</strong><p>${desc}</p>${btn('다시 플레이',act)}</div>`;};
+  const random=n=>Math.floor(Math.random()*n);
+  const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){let j=random(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;};
+  if(id==='tap'){
+    let active=false,count=0,remaining=10,runToken=0;
+    const intro=()=>{active=false;root.innerHTML=`<div class="mini-result"><span>👆</span><small>10초 스피드 탭</small><strong>10<em>초</em></strong><p>10초 동안 최대한 빠르게 터치하세요.<br>최고 ${bestText('tap','회')}</p>${btn('도전 시작')}</div>`;};
+    const refresh=()=>{root.innerHTML=`<div class="mini-scoreline"><span>남은 시간 <b>${remaining}초</b></span><span>최고 ${bestText('tap','회')}</span></div><button type="button" class="mini-tap-pad" data-mini="hit"><small>초고속 터치!</small><strong>${count}</strong><span>계속 눌러!</span></button>`;};
+    click=a=>{if(a==='restart'){runToken++;intro();return;}if(a==='start'&&!active){active=true;remaining=10;count=0;refresh();const token=++runToken;every(()=>{if(!active||token!==runToken)return;remaining--;if(remaining<=0){active=false;MiniSave.best('tap',count);result('👆','10초 동안 누른 횟수',count+'회',`최고 ${bestText('tap','회')}`);}else refresh();},1000);}else if(a==='hit'&&active){count++;const number=$('.mini-tap-pad strong',root);if(number)number.textContent=count;vibration(4);}};intro();
+  }else if(id==='simon'){
+    let seq=[],input=0,locked=true,score=0,epoch=0;
+    const colors=['#e85d72','#f1bd4e','#4baa9b','#6679e8'];
+    const draw=(msg)=>{root.innerHTML=`<div class="mini-scoreline"><span>단계 <b>${seq.length}</b></span><span>최고 ${bestText('simon','단계')}</span></div><div class="mini-simon-grid">${colors.map((c,i)=>`<button type="button" data-mini="color" data-idx="${i}" style="--simon:${c}" aria-label="${i+1}번 색상"></button>`).join('')}</div><p class="mini-feedback" id="simonMsg">${msg}</p>`;};
+    const round=()=>{locked=true;input=0;seq.push(random(4));draw('색깔 순서를 기억하세요');const token=++epoch;seq.forEach((c,i)=>later(()=>{if(token!==epoch)return;const node=$(`[data-idx="${c}"]`,root);node?.classList.add('lit');later(()=>node?.classList.remove('lit'),420);},500+i*720));later(()=>{if(token===epoch){locked=false;$('#simonMsg',root).textContent='이제 같은 순서로 터치하세요';}},550+seq.length*720);};
+    click=(a,t)=>{if(a==='restart'||a==='start'){epoch++;seq=[];score=0;round();return;}if(a!=='color'||locked)return;const v=+t.dataset.idx;t.classList.add('lit');later(()=>t.classList.remove('lit'),170);if(v!==seq[input]){locked=true;epoch++;result('🧩','기억한 단계',score,`최고 ${bestText('simon','단계')}`);return;}input++;vibration(10);if(input===seq.length){locked=true;score=seq.length;MiniSave.best('simon',score);$('#simonMsg',root).textContent='정답! 다음 단계로';later(round,950);}};
+    root.innerHTML=`<div class="mini-result"><span>🧩</span><small>색상 패턴 기억</small><strong>SIMON</strong><p>반짝이는 색을 순서대로 따라 눌러요.<br>최고 ${bestText('simon','단계')}</p>${btn('기억력 도전')}</div>`;
+  }else if(id==='math'){
+    let active=false,remaining=30,score=0,question=0,answer=0,options=[],runToken=0;
+    const next=()=>{let a=random(16)+2,b=random(16)+2,op=random(3);if(op===1&&a<b)[a,b]=[b,a];if(op===2){a=random(10)+2;b=random(9)+2;}answer=op===0?a+b:op===1?a-b:a*b;question++;const set=new Set([answer]);while(set.size<4){const wrong=Math.max(0,answer+random(21)-10);set.add(wrong);}options=shuffle([...set]);root.innerHTML=`<div class="mini-scoreline"><span>남은 시간 <b id="mathTime">${remaining}초</b></span><span>정답 <b>${score}</b></span></div><div class="mini-math-question">${a} ${['+','−','×'][op]} ${b} = ?</div><div class="mini-math-options">${options.map(x=>`<button type="button" data-mini="answer" data-value="${x}">${x}</button>`).join('')}</div><p class="mini-feedback">30초 안에 최대한 많이 맞혀보세요</p>`;};
+    const start=()=>{active=true;remaining=30;score=0;next();const token=++runToken;every(()=>{if(!active||token!==runToken)return;remaining--;const e=$('#mathTime',root);if(e)e.textContent=remaining+'초';if(remaining<=0){active=false;MiniSave.best('math',score);result('➕','30초 수학 점수',score+'점',`최고 ${bestText('math','점')}`);}},1000);};
+    click=(a,t)=>{if(a==='start'||a==='restart'){start();return;}if(a==='answer'&&active){if(+t.dataset.value===answer){score++;vibration(8);}else score=Math.max(0,score-1);next();}};
+    root.innerHTML=`<div class="mini-result"><span>➕</span><small>30초 암산 챌린지</small><strong>30<em>초</em></strong><p>사칙 계산 문제를 빠르게 풀어요.<br>틀리면 1점 감점 · 최고 ${bestText('math','점')}</p>${btn('시작')}</div>`;
+  }else if(id==='higher'){
+    let target=0,tries=0,active=false,low=1,high=100;
+    const paint=(msg='1부터 100 사이 숫자를 맞혀보세요')=>{root.innerHTML=`<div class="mini-scoreline"><span>시도 <b>${tries}회</b></span><span>최소 ${bestText('higher','회')}</span></div><div class="mini-number-prompt">🔢</div><h3 class="mini-center">${msg}</h3><p class="mini-feedback">가능 범위 ${low} ~ ${high}</p><form id="miniGuessForm" class="mini-guess-form"><input class="in" inputmode="numeric" type="number" min="1" max="100" placeholder="숫자 입력" required><button class="mini-main-btn" type="submit">확인</button></form>`;};
+    const start=()=>{active=true;target=1+random(100);tries=0;low=1;high=100;paint();};
+    const form=e=>{if(!active||e.target.id!=='miniGuessForm')return;e.preventDefault();const v=Number($('input',e.target).value);if(!Number.isInteger(v)||v<1||v>100)return;tries++;if(v===target){active=false;MiniSave.best('higher',tries,true);result('🔢','숫자 맞히기 성공',tries+'회',`최소 시도 ${bestText('higher','회')}`);}else{if(v<target)low=Math.max(low,v+1);else high=Math.min(high,v-1);paint(v<target?'UP! 더 큰 숫자예요':'DOWN! 더 작은 숫자예요');}};
+    root.addEventListener('submit',form);cleanup=()=>root.removeEventListener('submit',form);
+    click=a=>{if(a==='start'||a==='restart')start();};
+    root.innerHTML=`<div class="mini-result"><span>🔢</span><small>숫자 추리 게임</small><strong>1–100</strong><p>숨겨진 숫자를 최소 시도로 맞혀요.<br>최소 기록 ${bestText('higher','회')}</p>${btn('숫자 추리 시작')}</div>`;
+  }else if(id==='merge'){
+    let tiles=Array(16).fill(0),points=0,won=false,over=false;
+    const spawn=()=>{const empty=tiles.map((v,i)=>v?-1:i).filter(x=>x>=0);if(empty.length)tiles[empty[random(empty.length)]]=Math.random()<.9?2:4;};
+    const gameOver=()=>{for(let i=0;i<16;i++){if(!tiles[i])return false;if(i%4<3&&tiles[i]===tiles[i+1])return false;if(i<12&&tiles[i]===tiles[i+4])return false;}return true;};
+    const paint=(message='같은 숫자 두 개를 합쳐 2048을 만드세요')=>{root.innerHTML=`<div class="mini-scoreline"><span>점수 <b>${points}</b></span><span>최고 ${bestText('merge')}</span></div><div class="mini-2048-grid">${tiles.map(v=>`<div class="mini-2048-cell ${v?'v'+Math.min(v,2048):''}">${v||''}</div>`).join('')}</div><div class="mini-directions"><button data-mini="move" data-dir="up">↑</button><div><button data-mini="move" data-dir="left">←</button><button data-mini="move" data-dir="down">↓</button><button data-mini="move" data-dir="right">→</button></div></div><p class="mini-feedback">${message}</p>`;};
+    const start=()=>{tiles=Array(16).fill(0);points=0;won=false;over=false;spawn();spawn();paint();};
+    const move=dir=>{if(over)return;const before=tiles.join(',');for(let line=0;line<4;line++){let inds=[];for(let pos=0;pos<4;pos++){if(dir==='left')inds.push(line*4+pos);if(dir==='right')inds.push(line*4+3-pos);if(dir==='up')inds.push(pos*4+line);if(dir==='down')inds.push((3-pos)*4+line);}const vals=inds.map(i=>tiles[i]).filter(Boolean),merged=[];for(let k=0;k<vals.length;k++){if(vals[k]===vals[k+1]){const v=vals[k]*2;merged.push(v);points+=v;k++;if(v===2048)won=true;}else merged.push(vals[k]);}inds.forEach((i,j)=>tiles[i]=merged[j]||0);}if(tiles.join(',')===before)return;spawn();MiniSave.best('merge',points);over=gameOver();paint(over?'게임 종료! 다시 하려면 상단 새로고침을 눌러주세요':won?'2048 달성! 더 높은 점수에 도전해보세요':'같은 숫자를 합쳐보세요');};
+    click=(a,t)=>{if(a==='start'||a==='restart')start();else if(a==='move')move(t.dataset.dir);};
+    let down=null;const onDown=e=>{if(e.target.closest('.mini-2048-grid'))down={x:e.clientX,y:e.clientY};};const onUp=e=>{if(!down)return;const dx=e.clientX-down.x,dy=e.clientY-down.y;down=null;if(Math.max(Math.abs(dx),Math.abs(dy))<25)return;move(Math.abs(dx)>Math.abs(dy)?dx>0?'right':'left':dy>0?'down':'up');};
+    root.addEventListener('pointerdown',onDown);root.addEventListener('pointerup',onUp);cleanup=()=>{root.removeEventListener('pointerdown',onDown);root.removeEventListener('pointerup',onUp);};
+    start();
+  }else if(id==='tictac'){
+    let cells=Array(9).fill(''),finished=false,wins=0;
+    const outcome=b=>{const lines=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];for(const [a,c,d] of lines)if(b[a]&&b[a]===b[c]&&b[a]===b[d])return b[a];return b.every(Boolean)?'draw':'';};
+    const paint=(message='당신은 X · 컴퓨터는 O')=>{root.innerHTML=`<div class="mini-scoreline"><span>승리 <b>${wins}회</b></span><span>최고 연속 승리 ${bestText('tictac','회')}</span></div><div class="mini-tic-grid">${cells.map((v,i)=>`<button type="button" data-mini="cell" data-idx="${i}" ${v||finished?'disabled':''}>${v}</button>`).join('')}</div><p class="mini-feedback">${message}</p>${finished?btn('새 판 시작','restart'):''}`;};
+    const ai=()=>{const open=cells.map((v,i)=>v?-1:i).filter(i=>i>=0);if(!open.length)return;let pick=-1;for(const c of open){const test=[...cells];test[c]='O';if(outcome(test)==='O'){pick=c;break;}}if(pick<0)for(const c of open){const test=[...cells];test[c]='X';if(outcome(test)==='X'){pick=c;break;}}if(pick<0)pick=open.includes(4)?4:open[random(open.length)];cells[pick]='O';const status=outcome(cells);if(status)finished=true;paint(status==='O'?'컴퓨터 승리! 다시 도전하세요':status==='draw'?'무승부입니다':'당신 차례예요');};
+    click=(a,t)=>{if(a==='restart'||a==='start'){cells=Array(9).fill('');finished=false;paint();return;}if(a!=='cell'||finished)return;let i=+t.dataset.idx;if(cells[i])return;cells[i]='X';let status=outcome(cells);if(status){finished=true;if(status==='X'){wins++;MiniSave.best('tictac',wins);}paint(status==='X'?'당신이 이겼어요!':'무승부입니다');return;}paint('컴퓨터가 생각하는 중…');later(ai,350);};
+    paint();
+  }else if(id==='slide'){
+    let tiles=[],moves=0,solved=false;
+    const solvedCheck=()=>tiles.every((v,i)=>v===(i===8?0:i+1));
+    const paint=()=>{root.innerHTML=`<div class="mini-scoreline"><span>이동 <b>${moves}회</b></span><span>최소 ${bestText('slide','회')}</span></div><div class="mini-slide-grid">${tiles.map((v,i)=>`<button type="button" data-mini="tile" data-idx="${i}" class="${v?'':'empty'}" ${v?'':'disabled'}>${v||''}</button>`).join('')}</div><p class="mini-feedback">${solved?'완성했습니다!':'빈칸 옆 숫자를 눌러 1~8 순서로 맞히세요'}</p>${solved?btn('다시 섞기','restart'):''}`;};
+    const start=()=>{tiles=[1,2,3,4,5,6,7,8,0];moves=0;solved=false;let prev=-1;for(let k=0;k<90;k++){let e=tiles.indexOf(0),opts=[e-3,e+3,e%3?e-1:-1,e%3<2?e+1:-1].filter(i=>i>=0&&i<9&&i!==prev),pos=opts[random(opts.length)];[tiles[e],tiles[pos]]=[tiles[pos],tiles[e]];prev=e;}paint();};
+    click=(a,t)=>{if(a==='start'||a==='restart'){start();return;}if(a!=='tile'||solved)return;const i=+t.dataset.idx,e=tiles.indexOf(0);if(!(Math.abs(Math.floor(i/3)-Math.floor(e/3))+Math.abs(i%3-e%3)===1))return;[tiles[i],tiles[e]]=[tiles[e],tiles[i]];moves++;solved=solvedCheck();if(solved){MiniSave.best('slide',moves,true);vibration(40);}paint();};start();
+  }else if(id==='word'){
+    const words=[['APPLE','사과'],['OCEAN','바다'],['PIXEL','화면을 구성하는 작은 점'],['ROCKET','우주로 발사하는 것'],['BUTTON','누르는 UI 요소'],['PLANET','행성'],['ORANGE','주황색 과일'],['GUITAR','여섯 줄 악기'],['WINDOW','창문'],['PUZZLE','퍼즐'],['FLOWER','꽃'],['CAMERA','사진을 찍는 장치']];
+    let remaining=8,score=0,answer='',scrambled='',hint='',active=false;
+    const next=()=>{const word=words[random(words.length)];answer=word[0];hint=word[1];scrambled=shuffle([...answer]).join('');if(scrambled===answer)scrambled=answer.split('').reverse().join('');root.innerHTML=`<div class="mini-scoreline"><span>남은 문제 <b>${remaining}</b></span><span>정답 <b>${score}</b></span></div><div class="mini-word">${scrambled}</div><p class="mini-feedback">힌트: ${hint}</p><form id="miniWordForm" class="mini-word-form"><input class="in" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="15" placeholder="영어 단어 입력" required><button class="mini-main-btn" type="submit">확인</button></form><button data-mini="skip" class="mini-reset-link">모르겠어요 · 건너뛰기</button>`;};
+    const advance=good=>{if(good){score++;vibration(15);}remaining--;if(!remaining){active=false;MiniSave.best('word',score);result('🔤','8문제 중 정답',score+'개',`최고 ${bestText('word','개')}`);}else next();};
+    const onSubmit=e=>{if(e.target.id!=='miniWordForm'||!active)return;e.preventDefault();const v=$('input',e.target).value.trim().toUpperCase();if(v===answer)advance(true);else{const msg=$('.mini-feedback',root);msg.textContent='아쉬워요. 다시 시도해 보세요! 힌트: '+hint;}};
+    root.addEventListener('submit',onSubmit);cleanup=()=>root.removeEventListener('submit',onSubmit);
+    click=a=>{if(a==='start'||a==='restart'){active=true;remaining=8;score=0;next();}else if(a==='skip'&&active)advance(false);};
+    root.innerHTML=`<div class="mini-result"><span>🔤</span><small>영단어 순서 맞히기</small><strong>WORD</strong><p>섞인 영어 알파벳을 원래 단어로 바꿔요.<br>8문제 · 최고 ${bestText('word','개')}</p>${btn('단어 맞히기 시작')}</div>`;
+  }else if(id==='stroop'){
+    const names=['빨강','파랑','초록','노랑'],colors=['#e34b62','#4383e5','#279b71','#d4a225'];
+    let active=false,remaining=20,score=0,right=0,runToken=0;
+    const next=()=>{right=random(4);const shown=random(4);root.innerHTML=`<div class="mini-scoreline"><span>남은 시간 <b id="stroopTime">${remaining}초</b></span><span>점수 <b>${score}</b></span></div><p class="mini-feedback">글자 뜻이 아니라, 실제 글자 색깔을 고르세요</p><div class="mini-stroop-word" style="color:${colors[right]}">${names[shown]}</div><div class="mini-stroop-options">${names.map((n,i)=>`<button type="button" data-mini="answer" data-idx="${i}">${n}</button>`).join('')}</div>`;};
+    const start=()=>{active=true;remaining=20;score=0;next();const token=++runToken;every(()=>{if(!active||token!==runToken)return;remaining--;const time=$('#stroopTime',root);if(time)time.textContent=remaining+'초';if(remaining<=0){active=false;MiniSave.best('stroop',score);result('🌈','색깔 구별 점수',score+'점',`최고 ${bestText('stroop','점')}`);}},1000);};
+    click=(a,t)=>{if(a==='start'||a==='restart')start();else if(a==='answer'&&active){if(+t.dataset.idx===right){score++;vibration(7);}else score=Math.max(0,score-1);next();}};
+    root.innerHTML=`<div class="mini-result"><span>🌈</span><small>색상 인지력 시험</small><strong>20<em>초</em></strong><p>글씨의 내용에 속지 말고 색깔을 맞혀요.<br>최고 ${bestText('stroop','점')}</p>${btn('도전 시작')}</div>`;
+  }else if(id==='clock'){
+    let start=0,running=false,stopped=false,elapsed=0,runToken=0;
+    const format=ms=>(ms/1000).toFixed(2);
+    const paint=()=>{root.innerHTML=`<div class="mini-scoreline"><span>목표 <b>10.00초</b></span><span>최소 오차 ${bestText('clock','ms')}</span></div><div class="mini-clock-display" id="clockDisplay">${stopped?format(elapsed):'0.00'}<small>초</small></div><p class="mini-feedback">${running?'10초가 되었다고 느껴지면 정지하세요':'시작을 누르고 10초를 마음속으로 세어보세요'}</p>${btn(running?'정지!':'시작',running?'stop':'start')}</div>`;};
+    click=a=>{if(a==='restart'){runToken++;running=false;stopped=false;elapsed=0;paint();return;}if(a==='start'&&!running){running=true;stopped=false;start=performance.now();paint();const token=++runToken;every(()=>{if(running&&token===runToken){const display=$('#clockDisplay',root);if(display)display.innerHTML=`${format(performance.now()-start)}<small>초</small>`;}},45);}else if(a==='stop'&&running){running=false;stopped=true;elapsed=performance.now()-start;const diff=Math.round(Math.abs(elapsed-10000));MiniSave.best('clock',diff,true);result('⏱️','10초와의 오차',diff+'ms',`실제 기록 ${format(elapsed)}초 · 최소 오차 ${bestText('clock','ms')}`);}};
+    paint();
+  }
+  return {click,cleanup};
+}
+
 function viewMiniGame(el,id){
   const g=MINI_GAMES.find(x=>x.id===id); if(!g){el.innerHTML=navbar('없는 게임','/mini')+`<div class="page">게임을 찾을 수 없습니다.</div>`;return;}
   const area=`<div class="mini-playbox" id="miniPlay"></div>`;
-  el.innerHTML=navbar(g.name,'/mini',`<button class="icon-btn" type="button" data-act="mini-restart" aria-label="처음부터 다시 시작">${ic('reload')}</button>`)+`<div class="page narrow mini-game-page" style="--game:${g.color}"><div class="mini-game-heading"><span class="mini-overline">${g.emoji} ${g.type.toUpperCase()} / MINI APP</span><h2>${g.name}</h2><p>${g.desc}</p></div>${area}<div class="mini-nav-next"><span>다른 게임도 해볼래?</span><a href="#/mini/${MINI_GAMES[(MINI_GAMES.indexOf(g)+1)%6].id}" data-nav>다음 게임 ${ic('next')}</a></div></div>`;
+  el.innerHTML=navbar(g.name,'/mini',`<button class="icon-btn" type="button" data-act="mini-restart" aria-label="처음부터 다시 시작">${ic('reload')}</button>`)+`<div class="page narrow mini-game-page" style="--game:${g.color}"><div class="mini-game-heading"><span class="mini-overline">${g.emoji} ${g.type.toUpperCase()} / MINI APP</span><h2>${g.name}</h2><p>${g.desc}</p></div>${area}<div class="mini-nav-next"><span>다른 게임도 해볼래?</span><a href="#/mini/${MINI_GAMES[(MINI_GAMES.indexOf(g)+1)%MINI_GAMES.length].id}" data-nav>다음 게임 ${ic('next')}</a></div></div>`;
   const root=$('#miniPlay',el);let cleanup=()=>{};
   const timers=new Set(), intervals=new Set();let alive=true;
   const later=(fn,ms)=>{const t=setTimeout(()=>{timers.delete(t);if(alive)fn();},ms);timers.add(t);return t;};
@@ -1715,6 +1817,7 @@ function viewMiniGame(el,id){
     const onZone=e=>{if(active&&e.target.id==='aimZone')click('miss');};root.addEventListener('pointerdown',onZone);cleanup=()=>root.removeEventListener('pointerdown',onZone);
     root.innerHTML=`<div class="mini-result"><span>🎯</span><small>30초 집중력 게임</small><strong>30<em>초</em></strong><p>표적을 최대한 많이, 정확하게 터치하세요.<br>최고 ${bestText('aim')}</p>${button('게임 시작','start')}</div>`;
   }
+  else if(MINI_GAMES.some(g=>g.id===id)){const extra=miniExtra(root,id,{later,every,button,bestText,vibration});click=extra.click;cleanup=extra.cleanup;}
   const onClick=e=>{const t=e.target.closest('[data-mini]');if(!t||!root.contains(t)||t.disabled)return;e.preventDefault();click(t.dataset.mini,t);};
   root.addEventListener('click',onClick);
   el._cleanup=()=>{alive=false;clearTimers();root.removeEventListener('click',onClick);cleanup();};
