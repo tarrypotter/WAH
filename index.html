@@ -448,6 +448,49 @@ html[data-density="compact"] .mini-card{min-height:105px;padding:10px}html[data-
 .v23-hint{font-size:12px;color:var(--ink-3);line-height:1.6}.v23-file{display:block;position:relative;overflow:hidden;min-height:46px;border-radius:12px;background:var(--surface-2);padding:12px;text-align:center;font-weight:750}.v23-file input{position:absolute;inset:0;opacity:0;width:100%;cursor:pointer}
 @media(min-width:700px){.v23-card-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.v23-form{grid-template-columns:1fr 1fr}.v23-hero{padding:28px}.v23-hero h2{font-size:32px}}
 
+
+/* APPVERSE home refresh — compact discovery dashboard */
+.home-reworked{padding-bottom:24px}
+.home-studio{margin:6px 0 28px}
+.home-studio-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:8px 0 22px}
+.home-eyebrow{display:inline-flex;align-items:center;gap:6px;letter-spacing:.15em;font-weight:900;font-size:10px;color:var(--ink-3)}
+.home-sparkle{font-size:16px;color:#e0a222}
+.home-studio-head h1{font-size:clamp(28px,7.1vw,42px);font-weight:900;line-height:1.17;letter-spacing:-.055em;margin:10px 0 7px;word-break:keep-all;color:var(--ink)}
+.home-dot{color:#e7af37}.home-studio-head p{font-size:13px;color:var(--ink-3);line-height:1.5;word-break:keep-all}
+.home-head-profile{display:grid;place-items:center;width:48px;height:48px;border-radius:17px;background:var(--surface);border:1px solid var(--line);font-size:25px;flex:none;box-shadow:0 5px 16px #11182c0a}
+.home-entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.home-entry{position:relative;display:flex;flex-direction:column;min-width:0;min-height:230px;padding:16px 15px 13px;border-radius:22px;overflow:hidden;isolation:isolate;box-shadow:0 10px 28px #14214512;transition:transform .16s ease}
+.home-entry:active{transform:scale(.975)}
+.home-entry::after{content:"";position:absolute;z-index:-1;width:174px;height:174px;border:1px solid #ffffff50;border-radius:50%;top:15px;right:-104px;box-shadow:0 0 0 26px #ffffff0b,0 0 0 60px #ffffff09}
+.home-entry-game{color:#fff;background:linear-gradient(150deg,#18244c 0%,#3146a0 100%)}
+.home-entry-lab{color:#243646;background:linear-gradient(150deg,#b7ebd6 0%,#80c6c1 100%)}
+.home-entry-top{font-size:10px;font-weight:900;letter-spacing:.12em;display:flex;align-items:center;justify-content:space-between;gap:5px;opacity:.82}
+.home-entry-top>span{font-size:16px}.home-entry-icon{font-size:44px;line-height:1;margin:24px 0 13px;filter:drop-shadow(0 9px 10px #1114)}
+.home-entry strong{font-size:clamp(16px,4.5vw,21px);letter-spacing:-.04em;font-weight:900;word-break:keep-all}
+.home-entry-sub{font-size:11px;margin-top:5px;line-height:1.45;opacity:.83;word-break:keep-all}
+.home-entry-bottom{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-top:auto;padding-top:18px;border-top:1px solid currentColor;font-size:11px;font-weight:850;opacity:.9}
+.home-entry-bottom>span{font-size:18px}
+.home-player-strip{display:flex;gap:12px;align-items:center;border-radius:18px;border:1px solid var(--line);padding:13px;background:var(--surface);margin:12px 0 15px;min-width:0}
+.home-player-avatar{height:44px;width:44px;display:grid;place-items:center;border-radius:13px;background:var(--surface-2);font-size:24px;flex:none}
+.home-player-info{flex:1;min-width:0;display:grid;gap:5px}.home-player-info b{font-size:14px;font-weight:850;color:var(--ink)}.home-player-info b span{color:var(--link);font-size:11px;margin-left:5px}
+.home-player-info small{color:var(--ink-3);font-size:11px}.home-player-meter{height:5px;background:var(--surface-2);border-radius:99px;overflow:hidden;display:block}
+.home-player-meter i{height:100%;display:block;border-radius:99px;background:var(--token)}.home-player-next{font-size:19px;font-weight:800;color:var(--ink-3)}
+.home-pick{border:1px solid var(--line);background:var(--surface);border-radius:19px;overflow:hidden}
+.home-pick-top{display:flex;align-items:center;justify-content:space-between;padding:13px 14px 0;gap:8px}.home-pick-top span:first-child{font-size:10px;font-weight:900;letter-spacing:.11em;color:var(--link)}.home-pick-top span:last-child{font-size:11px;color:var(--ink-3);font-weight:700}
+.home-pick-main{display:flex;gap:13px;align-items:center;padding:11px 14px 15px;min-width:0}
+.home-pick-icon{display:grid;place-items:center;width:58px;height:58px;flex:none;border-radius:16px;font-size:31px;background:color-mix(in srgb,var(--game),transparent 85%)}
+.home-pick-info{min-width:0;flex:1;display:grid;gap:4px}.home-pick-info b{font-size:16px;font-weight:900;color:var(--ink)}.home-pick-info small{font-size:12px;color:var(--ink-3);line-height:1.3;word-break:keep-all}
+.home-pick-go{font-size:20px;color:var(--link)}
+.home-section{margin-top:29px}.home-section .sec-head h2{font-size:19px;letter-spacing:-.035em}.home-section-desc{font-size:12px;color:var(--ink-3);margin:0 0 13px;line-height:1.55}
+.home-lab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.home-lab-grid .lab-card{min-width:0;min-height:185px;padding:15px;border-radius:18px}.home-lab-grid .lab-card h3{font-size:18px}.home-lab-grid .lab-card p{font-size:11px}.home-lab-grid .lab-bubble{width:46px;height:46px;font-size:25px}
+.home-endnote{text-align:center;color:var(--ink-3);font-size:11px;padding:24px 0 12px}
+@media(max-width:360px){.home-entry{padding:13px 11px;min-height:222px}.home-entry-icon{font-size:39px}.home-entry-sub{font-size:10px}.home-lab-grid{grid-template-columns:1fr}}
+@media(min-width:780px){.home-entry{min-height:255px;padding:23px}.home-entry-icon{font-size:54px}.home-entry strong{font-size:24px}.home-entry-sub{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.home-entry{transition:none}}
+
+
+/* 2.3 · Home activity & Explore directory */
+.home-activity{max-width:840px;margin-inline:auto}.home-activity-section{margin:22px 0 0}.home-activity-title{display:flex;align-items:center;justify-content:space-between;gap:9px;margin:0 0 11px}.home-activity-title h2{font-size:18px;letter-spacing:-.04em;margin:0;font-weight:900}.home-activity-title>a,.home-activity-title>span{font-size:11px;color:var(--ink-3);font-weight:750}.home-today-card{display:flex;align-items:center;gap:13px;padding:17px;border:1px solid var(--line);background:var(--surface);border-radius:21px;min-height:108px}.home-today-emblem{display:grid;place-items:center;flex:none;width:68px;height:68px;border-radius:19px;font-size:38px;background:color-mix(in srgb,var(--game),transparent 80%)}.home-today-desc{display:grid;gap:5px;min-width:0;flex:1}.home-today-desc small{font-size:10px;font-weight:800;color:var(--link)}.home-today-desc b{font-size:19px;font-weight:900;color:var(--ink)}.home-today-desc>span{font-size:12px;color:var(--ink-3);line-height:1.4}.home-today-arrow{font-size:22px;color:var(--ink-3)}.home-inline-action{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:9px;border-radius:15px;background:var(--surface-2);padding:13px 14px;font-size:12px;color:var(--ink);font-weight:850;min-height:44px}.home-level-card{display:block;padding:19px;background:linear-gradient(120deg,#17264f,#2b4489);color:#fff;border-radius:21px;box-shadow:0 12px 26px #16274c19}.home-level-head{display:flex;gap:10px;align-items:center}.home-level-avatar{font-size:32px;width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:#ffffff20;flex:none}.home-level-head>div{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.home-level-head small{font-size:10px;color:#bac7ef}.home-level-head strong{font-size:21px;line-height:1.2}.home-level-head div>span{font-size:11px;color:#d1ddff}.home-level-head>b{font-size:13px;white-space:nowrap;color:#ffd579}.home-level-meter{height:8px;margin-top:17px;background:#ffffff33;border-radius:99px;overflow:hidden}.home-level-meter span{display:block;height:100%;border-radius:99px;background:#ffc846}.home-level-card p{display:flex;justify-content:space-between;gap:6px;margin:8px 0 0;font-size:11px;color:#d9e1ff}.home-my-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.home-my-grid>a{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;min-height:109px;padding:13px 10px;border:1px solid var(--line);background:var(--surface);border-radius:17px}.home-my-grid a>span{font-size:20px}.home-my-grid b{font-size:21px;font-weight:900;color:var(--ink);line-height:1.1}.home-my-grid b small{font-size:10px;color:var(--ink-3)}.home-my-grid em{font-size:10px;font-style:normal;color:var(--ink-3);word-break:keep-all}.home-my-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}.home-my-links a{display:inline-flex;align-items:center;min-height:40px;font-size:11px;font-weight:800;color:var(--ink);padding:8px 11px;border-radius:12px;background:var(--surface-2)}.home-activity-section .v23-panel{margin:0;padding:14px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}.home-activity-section .v23-panel>.sec-head{display:none}.home-mission-note,.home-activity-footer{font-size:11px;line-height:1.7;color:var(--ink-3);margin-top:10px}.home-activity-footer{text-align:center;margin-top:30px;padding-bottom:12px}.explore-hub-head{padding:10px 0 19px}.explore-hub-head h1{font-size:31px;letter-spacing:-.06em;margin:5px 0;font-weight:900}.explore-hub-head p{font-size:13px;color:var(--ink-3);line-height:1.5}.explore-entry-list{display:grid;gap:10px;margin-bottom:27px}.explore-entry{width:100%;font:inherit;text-align:left;cursor:pointer;display:flex;align-items:center;gap:14px;min-height:83px;padding:14px;border:1px solid var(--line);border-radius:19px;background:var(--surface);box-shadow:0 3px 12px #1e2a4708}.explore-entry-icon{width:54px;height:54px;flex:none;display:grid;place-items:center;border-radius:16px;background:var(--surface-2);font-size:28px}.explore-entry>span:nth-child(2){display:grid;gap:5px;flex:1;min-width:0}.explore-entry b{font-size:16px;color:var(--ink);font-weight:900}.explore-entry small{font-size:11px;color:var(--ink-3);line-height:1.35}.explore-entry-arrow{font-size:21px;color:var(--link)}.explore-entry-lab .explore-entry-icon{background:#d0f2e5}.explore-entry-mini .explore-entry-icon{background:#dae4ff}.explore-entry-url .explore-entry-icon{background:#ffedc2}.explore-url-section{scroll-margin-top:16px}.explore-url-section .home-activity-title{margin-bottom:12px}@media(min-width:700px){.explore-entry-list{grid-template-columns:repeat(3,minmax(0,1fr))}.explore-entry{align-items:flex-start;flex-direction:column;min-height:170px}.explore-entry-arrow{margin-left:auto}.home-my-grid>a{padding:18px}.home-my-grid b{font-size:26px}}@media(max-width:360px){.home-today-emblem{width:56px;height:56px;font-size:30px}.home-my-grid em{font-size:9px}.home-my-grid>a{padding:11px 7px}}@media(prefers-reduced-motion:reduce){.home-today-card,.explore-entry{transition:none}}
 </style>
 </head>
 <body>
@@ -1321,29 +1364,30 @@ const Theme = {
 };
 
 /* ========== 14. 공개 화면 ========== */
-function discoveryHome(){const dateKey=Math.floor(Date.now()/86400000),g=MINI_GAMES[dateKey%MINI_GAMES.length];return `<div class="discovery-hero"><span class="overline">APPVERSE / DISCOVER & PLAY</span><h1>열어보면,<br>새로운 경험이 시작돼.</h1><p>공개 웹앱을 탐색하고, 30개 게임과 4개 내장 LAB 앱을 바로 체험하세요.</p><div class="discovery-actions"><a href="#/mini" data-nav>🎮 미니 체험실</a><a class="alt" href="#/lab" data-nav>🧪 LAB 둘러보기</a></div></div><div class="discovery-counters"><div><b>${Repo.publicApps().length}</b><small>공개 웹앱</small></div><div><b>30</b><small>미니게임</small></div><div><b>4</b><small>내장 LAB</small></div></div><section class="sec"><div class="sec-head"><h2>오늘의 랜덤 체험</h2><a href="#/mini" data-nav>게임 전체</a></div><div class="discovery-spot" style="--game:${g.color}"><span class="spot-symbol">${g.emoji}</span><div class="spot-details"><small>TODAY'S MINI APP</small><b>${esc(g.name)}</b><p>${esc(g.desc)}</p><a href="#/mini/${g.id}" data-nav>바로 체험하기 ${ic('next')}</a></div></div></section>${Arcade.progress()}`;}
+/* HOME · compact editorial dashboard, no giant banner / featured / recently registered */
+/* APPVERSE 2.3 · Activity-focused Home */
+function discoveryHome(){
+  const games=MINI_GAMES,day=Math.floor(Date.now()/86400000),g=games[day%games.length];
+  const p=Experience.profile(),lvl=Arcade.level(),xp=Arcade.data.xp||0;
+  const visited=Arcade.count(),playCount=Object.values(Arcade.data.plays||{}).reduce((a,b)=>a+Number(b||0),0);
+  const ch=Experience.challenge();
+  const missions=Experience.missionList();
+  const achieved=missions.filter(m=>m.done).length;
+  const lvProgress=Arcade.percent();
+  return `<div class="home-studio home-activity">
+    <div class="home-studio-head"><div><span class="home-eyebrow">MY APPVERSE <span class="home-sparkle">✳</span></span><h1>오늘도 새로운 발견<span class="home-dot">.</span></h1><p>내 기록을 확인하고 오늘의 체험을 시작해 봐.</p></div><a class="home-head-profile" href="#/experience-profile" data-nav aria-label="내 프로필 설정">${p.avatar}</a></div>
+    <section class="home-activity-section" aria-label="오늘의 체험"><div class="home-activity-title"><h2>✦ 오늘의 체험</h2><span>DAILY PICK</span></div><a class="home-today-card" href="#/mini/${g.id}" data-nav style="--game:${g.color}"><span class="home-today-emblem">${g.emoji}</span><span class="home-today-desc"><small>오늘 추천하는 미니게임</small><b>${esc(g.name)}</b><span>${esc(g.desc)}</span></span><span class="home-today-arrow">↗</span></a><a class="home-inline-action" href="#/experience-challenge" data-nav>🎲 ${ch&&!ch.finished?`진행 중인 5게임 챌린지 이어하기 (${ch.done.length}/5)`:'5게임 랜덤 챌린지 도전하기'} <span>→</span></a></section>
+    <section class="home-activity-section" aria-label="플레이어 레벨"><div class="home-activity-title"><h2>🏅 LV · 나의 성장</h2><a href="#/arcade-profile" data-nav>업적 보기 →</a></div><a href="#/experience-profile" data-nav class="home-level-card"><div class="home-level-head"><span class="home-level-avatar">${p.avatar}</span><div><small>${esc(p.title)}</small><strong>LEVEL ${lvl}</strong><span>${esc(p.name)}</span></div><b>${xp.toLocaleString()} XP</b></div><div class="home-level-meter"><span style="width:${Math.max(0,Math.min(100,lvProgress))}%"></span></div><p>다음 레벨까지 ${Math.max(0,Arcade.nextLevel()-xp)} XP <span>프로필 설정 ↗</span></p></a></section>
+    <section class="home-activity-section" aria-label="나의 APPVERSE"><div class="home-activity-title"><h2>🚀 나의 APPVERSE</h2><a href="#/experience-analysis" data-nav>활동 분석 →</a></div><div class="home-my-grid"><a href="#/arcade-profile" data-nav><span>🎮</span><b>${visited}<small> / ${games.length}</small></b><em>체험한 게임</em></a><a href="#/experience-analysis" data-nav><span>⚡</span><b>${playCount}</b><em>게임 실행 횟수</em></a><a href="#/experience-profile" data-nav><span>✅</span><b>${achieved}<small> / ${missions.length}</small></b><em>오늘 완료 미션</em></a></div><div class="home-my-links"><a href="#/experience-profile" data-nav>👤 내 프로필</a><a href="#/experience-analysis" data-nav>📊 플레이 분석</a><a href="#/experience-data" data-nav>⚙️ 테마 · 백업</a></div></section>
+    <section class="home-activity-section" aria-label="오늘의 미션"><div class="home-activity-title"><h2>🎯 오늘의 미션</h2><span>${achieved}/${missions.length} 완료</span></div>${missionCardHTML()}<p class="home-mission-note">미션 보상은 완료한 항목의 ‘받기’를 눌러야 XP에 반영돼.</p></section>
+    <p class="home-activity-footer">웹앱·내장 LAB·미니게임은 아래 <b>탐색</b> 메뉴에서 둘러볼 수 있어.</p>
+  </div>`;
+}
 const viewHome = el => {
-  const S = Repo.settings, H = S.home, apps = Repo.publicApps(), notices = Repo.publicNotices(), favs = apps.filter(a => Fav.has(a.id));
-  let h = `<div class="page">${discoveryHome()}<h1 class="lede" style="font-size:23px;margin-top:30px">${esc(S.intro)}</h1>`;
-  if (!apps.length) h += emptyHTML('아직 등록된 웹앱이 없어요', '웹앱이 등록되면 추천, 최근 등록, 카테고리별 목록이 이곳에 나타납니다.');
-  const sec = (t, body, more = '') => `<section class="sec"><div class="sec-head"><h2>${esc(t)}</h2>${more}</div>${body}</section>`;
-  const moreLink = '<a href="#/explore" data-nav>전체 보기</a>';
-  if (H.notices && notices.length) h += sec('공지사항', `<div class="rows">${notices.slice(0, 3).map(n => `<button class="row-item" type="button" data-act="notice" data-id="${esc(n.id)}"><span class="grow"><b>${esc(n.title)}</b><span class="sub">${n.pinned ? '고정 공지, ' : ''}${fmtDate(n.createdAt)}</span></span>${ic('next')}</button>`).join('')}</div>`);
-  if (apps.length) {
-    const feat = apps.filter(a => a.isFeatured).sort(SORTERS.manual).slice(0, S.featuredLimit);
-    if (H.featured && feat.length) h += sec('추천 웹앱', `<div class="rail">${feat.map(a => `<a class="feat" href="#/app/${esc(a.id)}" data-nav>${imgTag(a, 'thumb', '', false)}<div class="feat-cap"><h3>${esc(a.name)}</h3><p>${esc(a.subtitle || a.description)}</p></div></a>`).join('')}</div>`);
-    if (H.favorites && favs.length) h += sec('즐겨찾기', `<div class="rail">${favs.slice(0, 12).map(tileHTML).join('')}</div>`, '<a href="#/favorites" data-nav>모두 보기</a>');
-    if (H.recent) h += sec('최근 등록', `<div class="rail">${[...apps].sort(SORTERS.latest).slice(0, 10).map(tileHTML).join('')}</div>`);
-    if (H.categories) {
-      const cs = Repo.categories.map(c => [c, apps.filter(a => a.categoryId === c.id).length]).filter(x => x[1]);
-      if (cs.length) h += sec('카테고리', `<div class="rail">${cs.map(([c, n]) => `<button class="chip" type="button" data-act="go-cat" data-id="${esc(c.id)}">${esc(c.name)} <small>${n}</small></button>`).join('')}</div>`);
-    }
-    const upd = apps.filter(a => new Date(a.updatedAt) - new Date(a.createdAt) > 6e4).sort(SORTERS.updated).slice(0, 5);
-    if (H.updates && upd.length) h += sec('최근 업데이트', `<div class="rows">${upd.map(a => `<a class="row-item" href="#/app/${esc(a.id)}" data-nav>${imgTag(a, 'icon', 'mini')}<span class="grow"><b>${esc(a.name)}</b><span class="sub">버전 ${esc(a.version)}, ${fmtDate(a.updatedAt)}</span></span>${ic('next')}</a>`).join('')}</div>`);
-    if (H.all) h += sec('전체 웹앱', `<div class="app-grid">${[...apps].sort(SORTERS[S.defaultSort] || SORTERS.latest).slice(0, 12).map(cardHTML).join('')}</div>`, moreLink);
-  }
-  h += dashboardHomeV23(); h += miniHomeSection(); h += labHomeSection();
-  el.innerHTML = h + '</div>';
+  const notices=Repo.publicNotices();
+  let html=`<div class="page home-reworked">${discoveryHome()}`;
+  if(Repo.settings.home.notices&&notices.length){html+=`<section class="sec home-section"><div class="sec-head"><h2>공지사항</h2></div><div class="rows">${notices.slice(0,2).map(n=>`<button class="row-item" type="button" data-act="notice" data-id="${esc(n.id)}"><span class="grow"><b>${esc(n.title)}</b><span class="sub">${fmtDate(n.createdAt)}</span></span>${ic('next')}</button>`).join('')}</div></section>`;}
+  el.innerHTML=html+'</div>';
 };
 const exploreState = () => { const S = Repo.settings, e = Prefs.data.explore; const st = { q: e.q || '', cat: e.cat || '', sort: e.sort || S.defaultSort, view: e.view || S.defaultView }; if (st.sort === 'popular' && !Repo.hasPopularity()) st.sort = S.defaultSort; if (st.cat && !Repo.cat(st.cat)) st.cat = ''; return st; };
 function filterApps(list, st) {
@@ -1371,10 +1415,12 @@ const Explore = {
   sortOptions(st) { const o = [['latest', '최신순'], ['name', '이름순'], ['updated', '최근 업데이트순'], ['manual', '게시 순서']]; if (Repo.hasPopularity()) o.push(['popular', '인기순']); return o.map(([v, t]) => `<option value="${v}" ${st.sort === v ? 'selected' : ''}>${t}</option>`).join(''); },
   render(el) {
     const st = exploreState();
-    el.innerHTML = `<div class="page"><div class="search-wrap">${ic('search')}<input class="in" id="exploreQ" type="search" enterkeyhint="search" placeholder="이름, 설명, 태그로 검색" aria-label="웹앱 검색" data-input="explore-q" value="${esc(st.q)}" autocomplete="off"></div>
+    el.innerHTML = `<div class="page"><div class="explore-hub-head"><span class="home-eyebrow">DISCOVER APPVERSE ✳</span><h1>탐색</h1><p>URL 웹앱부터 내장 LAB, 미니 체험실까지 한곳에서 만나보세요.</p></div>
+    <nav class="explore-entry-list" aria-label="체험 카테고리"><button type="button" class="explore-entry explore-entry-url" data-act="explore-jump" aria-label="URL 웹앱 목록으로 이동"><span class="explore-entry-icon">🌐</span><span><b>URL 웹앱</b><small>등록된 공개 웹앱 ${Repo.publicApps().length}개</small></span><span class="explore-entry-arrow">↓</span></button><a class="explore-entry explore-entry-lab" href="#/lab" data-nav><span class="explore-entry-icon">🧪</span><span><b>내장 웹앱</b><small>외부 URL 없이 실행하는 LAB ${LAB_APPS.length}종</small></span><span class="explore-entry-arrow">↗</span></a><a class="explore-entry explore-entry-mini" href="#/mini" data-nav><span class="explore-entry-icon">🎮</span><span><b>미니 체험실</b><small>바로 즐기는 미니게임 ${MINI_GAMES.length}종</small></span><span class="explore-entry-arrow">↗</span></a></nav>
+    <section id="explore-url-list" class="explore-url-section"><div class="home-activity-title"><h2>🌐 URL 웹앱 둘러보기</h2><span>${Repo.publicApps().length}개</span></div><div class="search-wrap">${ic('search')}<input class="in" id="exploreQ" type="search" enterkeyhint="search" placeholder="이름, 설명, 태그로 검색" aria-label="웹앱 검색" data-input="explore-q" value="${esc(st.q)}" autocomplete="off"></div>
     <div class="rail cat-chips" style="margin-top:10px" role="group" aria-label="카테고리"></div>
     <div class="tools"><span class="count" aria-live="polite"></span><div class="d-flex gap-1 align-items-center"><select class="in sort-sel" aria-label="정렬" data-change="explore-sort">${this.sortOptions(st)}</select><button class="icon-btn view-toggle" type="button" data-act="toggle-view" aria-label="보기 방식 전환">${ic(st.view === 'list' ? 'grid' : 'rows')}</button></div></div>
-    <div class="app-grid"></div><div class="exp-empty"></div><div class="sentinel" style="height:1px"></div></div>`;
+    <div class="app-grid"></div><div class="exp-empty"></div><div class="sentinel" style="height:1px"></div></section></div>`;
     el._cleanup = () => el._io?.disconnect();
     this.chips(el); this.results(el);
   },
@@ -1388,9 +1434,7 @@ const viewMore = el => {
   const S = Repo.settings, mode = Theme.mode(), notices = Repo.publicNotices(), admin = Auth.valid();
   el.innerHTML = `<div class="page narrow"><h1 class="lede" style="font-size:30px">전체</h1>
   ${admin ? `<section class="sec" style="margin-top:8px"><div class="rows"><a class="row-item" href="#/admin" data-nav><span class="grow"><b>관리 센터</b><span class="sub">데모 모드로 로그인됨</span></span>${ic('next')}</a><button class="row-item" type="button" data-act="logout"><span class="grow"><b>로그아웃</b></span></button></div></section>` : ''}
-  <section class="sec"><div class="sec-head"><h2>LAB · 내장 웹앱</h2></div><div class="rows"><a class="row-item" href="#/lab" data-nav><span class="grow"><b>ORBIT · 포켓데이 · 가계부 · PLANET LAB</b><span class="sub">URL 없는 내장 웹앱 4개 바로 실행</span></span>${ic('next')}</a></div></section>
   <section class="sec"><div class="sec-head"><h2>내 아케이드 프로필</h2></div><div class="rows"><a class="row-item" href="#/arcade-profile" data-nav><span class="grow"><b>LEVEL ${Arcade.level()} · ${Arcade.data.xp} XP</b><span class="sub">내 기록과 업적 · 체험 ${Arcade.count()}/30</span></span>${ic('next')}</a></div></section>
-  <section class="sec"><div class="sec-head"><h2>미니 체험실</h2></div><div class="rows"><a class="row-item" href="#/mini" data-nav><span class="grow"><b>30개 미니게임 바로 하기</b><span class="sub">반응속도 · 기억력 · 2048 · 두뇌게임 · 룰렛 외 11종</span></span>${ic('next')}</a></div></section>
   <section class="sec"><div class="sec-head"><h2>내 플레이 공간</h2></div><div class="rows"><a class="row-item" href="#/experience-profile" data-nav><span class="grow"><b>👤 플레이어 프로필</b><span class="sub">닉네임 · 아바타 · 칭호 설정</span></span>${ic('next')}</a><a class="row-item" href="#/experience-challenge" data-nav><span class="grow"><b>🎲 5게임 연속 탐험</b><span class="sub">랜덤 게임 5개 체험하고 XP 받기</span></span>${ic('next')}</a><a class="row-item" href="#/experience-analysis" data-nav><span class="grow"><b>📈 플레이 분석</b><span class="sub">최근 7일 · 장르별 · 방문 기록</span></span>${ic('next')}</a><a class="row-item" href="#/experience-data" data-nav><span class="grow"><b>💾 테마 · 데이터 백업</b><span class="sub">테마 4종 · JSON 내보내기 및 복원</span></span>${ic('next')}</a></div></section>
   <section class="sec"><div class="sec-head"><h2>화면 테마</h2></div><div class="seg" role="group" aria-label="테마">${[['system', '시스템'], ['light', '라이트'], ['dark', '다크']].map(([v, t]) => `<button type="button" data-act="theme" data-v="${v}" aria-pressed="${mode === v}">${t}</button>`).join('')}</div></section>
   <section class="sec"><div class="sec-head"><h2>공지사항</h2></div>${notices.length ? `<div class="rows">${notices.map(n => `<button class="row-item" type="button" data-act="notice" data-id="${esc(n.id)}"><span class="grow"><b>${esc(n.title)}</b><span class="sub">${fmtDate(n.createdAt)}</span></span>${ic('next')}</button>`).join('')}</div>` : '<p class="hint">등록된 공지사항이 없습니다.</p>'}</section>
@@ -2187,6 +2231,7 @@ const swapMove = async (key, id, d, sorted) => {
   Router.refresh();
 };
 const A = {
+  'explore-jump'(){const section=$('#explore-url-list',Router.active?.el);if(section){Router.active.el.scrollTo({top:section.offsetTop,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});$('#exploreQ',Router.active.el)?.focus({preventScroll:true});}},
   'avatar-pick'(el){const f=el.closest('form');if(!f)return;$('[name=avatar]',f).value=el.dataset.val;$$('[data-act=avatar-pick]',f).forEach(b=>b.setAttribute('aria-pressed',String(b===el)));},
   'xp-claim'(el){const n=Experience.claim(el.dataset.id);if(!n)return;toast(`미션 완료 · +${n} XP`);Router.refresh();},
   'challenge-new'(){if(Experience.challenge()&&!Experience.challenge().finished){Modal.confirm({title:'새로운 도전을 시작할까요?',body:'현재 5게임 챌린지 진행 상황은 초기화됩니다.',ok:'새로 시작'}).then(y=>{if(y){Experience.startChallenge();Router.refresh();}});}else{Experience.startChallenge();Router.refresh();}},
