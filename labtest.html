@@ -29,7 +29,7 @@ iframe{border:0;background:#000;border-radius:10px;box-shadow:0 8px 24px #0008}
 const ids=['snapstudio','typerace','typetaxi','typedefense'];
 const params=new URLSearchParams(location.search);
 const pick=params.get('id')||'snapstudio';
-fetch('index.html').then(r=>r.text()).then(t=>{
+fetch('index.html?ts='+Date.now(),{cache:'no-store'}).then(r=>r.text()).then(t=>{
   const pack={};
   const j=t.match(/<script type="application\/json" id="appverse-lab-pack">([\s\S]*?)<\/script>/);
   if(j)Object.assign(pack,JSON.parse(j[1]));
