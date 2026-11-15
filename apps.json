@@ -212,6 +212,50 @@
       "sortOrder": 9,
       "createdAt": "2026-11-16T00:15:00+09:00",
       "updatedAt": "2026-11-16T00:15:00+09:00"
+    },
+    {
+      "id": "abyssblade",
+      "name": "ABYSSBLADE",
+      "subtitle": "심연의 룬검 각성 로그라이크",
+      "description": "녹슨 단검 하나로 심연에 내려가 층을 넘는 로그라이크 액션. 드래그로 움직이면 사거리 안의 적을 자동으로 베고, 층마다 성물 카드를 골라 검을 각성시키며 내려간다",
+      "categoryId": "games",
+      "tags": [
+        "로그라이크",
+        "액션",
+        "Rust",
+        "게임"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/abyssblade/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": false,
+      "sortOrder": 10,
+      "createdAt": "2026-11-16T04:40:00+09:00",
+      "updatedAt": "2026-11-16T04:40:00+09:00"
+    },
+    {
+      "id": "shadowduel",
+      "name": "SHADOWDUEL",
+      "subtitle": "AI와 붙는 카드 듀얼",
+      "description": "Rust WASM 엔진으로 돌아가는 1:1 카드 듀얼. 몬스터 5존·마법 함정 3존·LP 8000 규칙에 제물 소환과 함정 발동이 들어가고, 브론즈부터 그랜드마스터까지 로컬 AI와 랭킹전을 돈다",
+      "categoryId": "games",
+      "tags": [
+        "카드",
+        "듀얼",
+        "전략",
+        "게임"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/cardduel/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": false,
+      "sortOrder": 11,
+      "createdAt": "2026-11-16T04:40:00+09:00",
+      "updatedAt": "2026-11-16T04:40:00+09:00"
     }
   ],
   "categories": [
@@ -248,5 +292,5 @@
   ],
   "notices": [],
   "settings": {},
-  "generatedAt": "2026-11-16T00:15:00+09:00"
+  "generatedAt": "2026-11-16T04:40:00+09:00"
 }

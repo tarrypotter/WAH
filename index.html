@@ -837,6 +837,50 @@ html[data-skin="cosmos"]{--link:#9a76ef;--game:#8b66ef;--accent:#a77cff;--surfac
       "sortOrder": 9,
       "createdAt": "2026-11-16T00:15:00+09:00",
       "updatedAt": "2026-11-16T00:15:00+09:00"
+    },
+    {
+      "id": "abyssblade",
+      "name": "ABYSSBLADE",
+      "subtitle": "심연의 룬검 각성 로그라이크",
+      "description": "녹슨 단검 하나로 심연에 내려가 층을 넘는 로그라이크 액션. 드래그로 움직이면 사거리 안의 적을 자동으로 베고, 층마다 성물 카드를 골라 검을 각성시키며 내려간다",
+      "categoryId": "games",
+      "tags": [
+        "로그라이크",
+        "액션",
+        "Rust",
+        "게임"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/abyssblade/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": false,
+      "sortOrder": 10,
+      "createdAt": "2026-11-16T04:40:00+09:00",
+      "updatedAt": "2026-11-16T04:40:00+09:00"
+    },
+    {
+      "id": "shadowduel",
+      "name": "SHADOWDUEL",
+      "subtitle": "AI와 붙는 카드 듀얼",
+      "description": "Rust WASM 엔진으로 돌아가는 1:1 카드 듀얼. 몬스터 5존·마법 함정 3존·LP 8000 규칙에 제물 소환과 함정 발동이 들어가고, 브론즈부터 그랜드마스터까지 로컬 AI와 랭킹전을 돈다",
+      "categoryId": "games",
+      "tags": [
+        "카드",
+        "듀얼",
+        "전략",
+        "게임"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/cardduel/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": false,
+      "sortOrder": 11,
+      "createdAt": "2026-11-16T04:40:00+09:00",
+      "updatedAt": "2026-11-16T04:40:00+09:00"
     }
   ],
   "categories": [
@@ -873,7 +917,7 @@ html[data-skin="cosmos"]{--link:#9a76ef;--game:#8b66ef;--accent:#a77cff;--surfac
   ],
   "notices": [],
   "settings": {},
-  "generatedAt": "2026-11-10T01:00:00+09:00"
+  "generatedAt": "2026-11-16T04:40:00+09:00"
 }
 </script>
 <script>
@@ -1711,7 +1755,7 @@ const Explore = {
         <button type="button" class="explore-tab ${st.type === 'mini' ? 'active' : ''}" data-act="set-type" data-type="mini" role="tab" aria-selected="${st.type === 'mini'}"><span class="tab-label">🎮 미니게임</span><span class="tab-count">${data.minis.length}</span></button>
       </div>
       <div class="explore-search-area">
-        <div class="search-wrap">${ic('search')}<input class="in" id="exploreQ" type="search" enterkeyhint="search" placeholder="${st.type === 'url' ? 'URL 웹앱 검색 (이름, 설명, 태그)' : st.type === 'lab' ? '내장 LAB 검색 (이름, 도구, 시뮬)' : st.type === 'mini' ? '54종 미니게임 검색 (이름, 장르)' : '전체 74개 체험 통합 검색'}" aria-label="체험 검색" data-input="explore-q" value="${esc(st.q)}" autocomplete="off">${st.q ? `<button type="button" class="search-clear-btn" data-act="clear-q" aria-label="검색어 지우기">✕</button>` : ''}</div>
+        <div class="search-wrap">${ic('search')}<input class="in" id="exploreQ" type="search" enterkeyhint="search" placeholder="${st.type === 'url' ? 'URL 웹앱 검색 (이름, 설명, 태그)' : st.type === 'lab' ? '내장 LAB 검색 (이름, 도구, 시뮬)' : st.type === 'mini' ? '54종 미니게임 검색 (이름, 장르)' : '전체 76개 체험 통합 검색'}" aria-label="체험 검색" data-input="explore-q" value="${esc(st.q)}" autocomplete="off">${st.q ? `<button type="button" class="search-clear-btn" data-act="clear-q" aria-label="검색어 지우기">✕</button>` : ''}</div>
         <div class="explore-tags-rail" role="group" aria-label="추천 키워드">
           <span class="tags-lead">추천:</span>
           <button type="button" class="search-tag" data-act="tag-q" data-q="타이핑">🏎️ 타이핑</button>
@@ -1726,7 +1770,7 @@ const Explore = {
         </div>
       </div>
       <div class="explore-context-banner">
-        ${st.type === 'all' ? '<p><span>✨</span> <b>전체 74개 체험 허브</b> · 웹앱, 오프라인 LAB, 54개 미니게임을 한눈에 보고 바로 실행하세요.</p>' :
+        ${st.type === 'all' ? '<p><span>✨</span> <b>전체 76개 체험 허브</b> · 웹앱, 오프라인 LAB, 54개 미니게임을 한눈에 보고 바로 실행하세요.</p>' :
           st.type === 'url' ? '<p><span>🌐</span> <b>공개 URL 웹앱</b> · 브라우저에서 바로 체험하는 실배포 포트폴리오 및 웹앱 목록입니다.</p>' :
           st.type === 'lab' ? '<p><span>🧪</span> <b>내장 LAB 실험실</b> · 외부 링크나 인터넷 없이 APPVERSE 안에서 100% 로컬로 안전하게 실행됩니다.</p>' :
           '<p><span>🎮</span> <b>미니 아케이드</b> · 30초 안에 가볍게 즐기는 순발력, 두뇌, 기억력, 퍼즐 54종 미니게임 모음입니다.</p>'}
