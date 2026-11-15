@@ -168,6 +168,28 @@
       "sortOrder": 7,
       "createdAt": "2026-11-10T00:00:00+09:00",
       "updatedAt": "2026-11-10T00:00:00+09:00"
+    },
+    {
+      "id": "moneylog",
+      "name": "머니로그",
+      "subtitle": "수입·지출 기록과 고정비 관리",
+      "description": "날짜별 수입과 지출을 적으면 월 합계와 잔액을 계산하고, 월세·통신비 같은 고정지출은 결제일이 지난 뒤 체크하지 않으면 미납으로 표시하는 가계부 웹앱",
+      "categoryId": "lifestyle",
+      "tags": [
+        "가계부",
+        "지출",
+        "고정비",
+        "생활"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/moneylog/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": false,
+      "sortOrder": 8,
+      "createdAt": "2026-11-15T22:50:00+09:00",
+      "updatedAt": "2026-11-15T22:50:00+09:00"
     }
   ],
   "categories": [
@@ -204,5 +226,5 @@
   ],
   "notices": [],
   "settings": {},
-  "generatedAt": "2026-11-10T01:00:00+09:00"
+  "generatedAt": "2026-11-15T22:50:00+09:00"
 }
