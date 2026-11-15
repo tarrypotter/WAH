@@ -190,6 +190,28 @@
       "sortOrder": 8,
       "createdAt": "2026-11-15T22:50:00+09:00",
       "updatedAt": "2026-11-15T22:50:00+09:00"
+    },
+    {
+      "id": "albalog",
+      "name": "알바로그",
+      "subtitle": "알바 근무 기록과 급여 계산",
+      "description": "출근·퇴근한 날과 근무 시간을 적으면 세전·공제·실수령액을 계산하고, 근무지마다 고정 근무일을 넣으면 월말 예상 급여까지 보여주는 알바 근무 기록 웹앱",
+      "categoryId": "lifestyle",
+      "tags": [
+        "알바",
+        "급여",
+        "근무",
+        "생활"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/albalog/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": false,
+      "sortOrder": 9,
+      "createdAt": "2026-11-16T00:15:00+09:00",
+      "updatedAt": "2026-11-16T00:15:00+09:00"
     }
   ],
   "categories": [
@@ -226,5 +248,5 @@
   ],
   "notices": [],
   "settings": {},
-  "generatedAt": "2026-11-15T22:50:00+09:00"
+  "generatedAt": "2026-11-16T00:15:00+09:00"
 }

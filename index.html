@@ -815,6 +815,28 @@ html[data-skin="cosmos"]{--link:#9a76ef;--game:#8b66ef;--accent:#a77cff;--surfac
       "sortOrder": 8,
       "createdAt": "2026-11-15T22:50:00+09:00",
       "updatedAt": "2026-11-15T22:50:00+09:00"
+    },
+    {
+      "id": "albalog",
+      "name": "알바로그",
+      "subtitle": "알바 근무 기록과 급여 계산",
+      "description": "출근·퇴근한 날과 근무 시간을 적으면 세전·공제·실수령액을 계산하고, 근무지마다 고정 근무일을 넣으면 월말 예상 급여까지 보여주는 알바 근무 기록 웹앱",
+      "categoryId": "lifestyle",
+      "tags": [
+        "알바",
+        "급여",
+        "근무",
+        "생활"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/albalog/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": false,
+      "sortOrder": 9,
+      "createdAt": "2026-11-16T00:15:00+09:00",
+      "updatedAt": "2026-11-16T00:15:00+09:00"
     }
   ],
   "categories": [
@@ -1682,7 +1704,7 @@ const Explore = {
         <button type="button" class="explore-tab ${st.type === 'mini' ? 'active' : ''}" data-act="set-type" data-type="mini" role="tab" aria-selected="${st.type === 'mini'}"><span class="tab-label">🎮 미니게임</span><span class="tab-count">${data.minis.length}</span></button>
       </div>
       <div class="explore-search-area">
-        <div class="search-wrap">${ic('search')}<input class="in" id="exploreQ" type="search" enterkeyhint="search" placeholder="${st.type === 'url' ? 'URL 웹앱 검색 (이름, 설명, 태그)' : st.type === 'lab' ? '내장 LAB 검색 (이름, 도구, 시뮬)' : st.type === 'mini' ? '54종 미니게임 검색 (이름, 장르)' : '전체 73개 체험 통합 검색'}" aria-label="체험 검색" data-input="explore-q" value="${esc(st.q)}" autocomplete="off">${st.q ? `<button type="button" class="search-clear-btn" data-act="clear-q" aria-label="검색어 지우기">✕</button>` : ''}</div>
+        <div class="search-wrap">${ic('search')}<input class="in" id="exploreQ" type="search" enterkeyhint="search" placeholder="${st.type === 'url' ? 'URL 웹앱 검색 (이름, 설명, 태그)' : st.type === 'lab' ? '내장 LAB 검색 (이름, 도구, 시뮬)' : st.type === 'mini' ? '54종 미니게임 검색 (이름, 장르)' : '전체 74개 체험 통합 검색'}" aria-label="체험 검색" data-input="explore-q" value="${esc(st.q)}" autocomplete="off">${st.q ? `<button type="button" class="search-clear-btn" data-act="clear-q" aria-label="검색어 지우기">✕</button>` : ''}</div>
         <div class="explore-tags-rail" role="group" aria-label="추천 키워드">
           <span class="tags-lead">추천:</span>
           <button type="button" class="search-tag" data-act="tag-q" data-q="타이핑">🏎️ 타이핑</button>
@@ -1697,7 +1719,7 @@ const Explore = {
         </div>
       </div>
       <div class="explore-context-banner">
-        ${st.type === 'all' ? '<p><span>✨</span> <b>전체 73개 체험 허브</b> · 웹앱, 오프라인 LAB, 54개 미니게임을 한눈에 보고 바로 실행하세요.</p>' :
+        ${st.type === 'all' ? '<p><span>✨</span> <b>전체 74개 체험 허브</b> · 웹앱, 오프라인 LAB, 54개 미니게임을 한눈에 보고 바로 실행하세요.</p>' :
           st.type === 'url' ? '<p><span>🌐</span> <b>공개 URL 웹앱</b> · 브라우저에서 바로 체험하는 실배포 포트폴리오 및 웹앱 목록입니다.</p>' :
           st.type === 'lab' ? '<p><span>🧪</span> <b>내장 LAB 실험실</b> · 외부 링크나 인터넷 없이 APPVERSE 안에서 100% 로컬로 안전하게 실행됩니다.</p>' :
           '<p><span>🎮</span> <b>미니 아케이드</b> · 30초 안에 가볍게 즐기는 순발력, 두뇌, 기억력, 퍼즐 54종 미니게임 모음입니다.</p>'}
