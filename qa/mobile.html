@@ -17,7 +17,8 @@ html,body{margin:0;height:100%;background:#2b2f38;overflow:hidden}
   phone.style.height = (q.get('h') || 844) + 'px';
   const base = q.get('base') || 'https://tarrypotter.github.io/WAH/';
   const lab = q.get('lab') || '';
-  phone.src = base + (lab ? '#/lab/' + lab : '');
+  const hash = q.get('hash') || '';
+  phone.src = base + (lab ? '#/lab/' + lab : hash ? '#' + hash : '');
 </script>
 </body>
 </html>
