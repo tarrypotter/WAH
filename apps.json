@@ -256,6 +256,28 @@
       "sortOrder": 11,
       "createdAt": "2026-11-16T04:40:00+09:00",
       "updatedAt": "2026-11-16T04:40:00+09:00"
+    },
+    {
+      "id": "draftxi",
+      "name": "DRAFT XI 26/27",
+      "subtitle": "3택 드래프트 · 무제한 강화 축구 시뮬",
+      "description": "랜덤 포메이션에서 포지션별 3명 중 한 명을 골라 11명을 채우고, 경기로 번 코인으로 능력치를 상한 없이 올리는 26/27 유럽 5대 리그 드래프트 축구 시뮬레이션",
+      "categoryId": "games",
+      "tags": [
+        "축구",
+        "드래프트",
+        "시뮬",
+        "게임"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/draftxi/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": false,
+      "sortOrder": 12,
+      "createdAt": "2026-11-16T22:30:00+09:00",
+      "updatedAt": "2026-11-16T22:30:00+09:00"
     }
   ],
   "categories": [
