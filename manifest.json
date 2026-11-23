@@ -1,0 +1,19 @@
+{
+  "name": "APPVERSE — Web App Hub",
+  "short_name": "APPVERSE",
+  "description": "웹앱을 앱스토어처럼 고르고 바로 체험하는 플랫폼",
+  "lang": "ko",
+  "id": "/WAH/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#08080a",
+  "theme_color": "#08080a",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
