@@ -278,6 +278,31 @@
       "sortOrder": 12,
       "createdAt": "2026-11-16T22:30:00+09:00",
       "updatedAt": "2026-11-16T22:30:00+09:00"
+    },
+    {
+      "id": "novel",
+      "name": "ABYSSAL GRIMOIRE",
+      "subtitle": "봉인된 단편 아카이브 · 8편 · 형광펜·별점·직접 집필",
+      "description": "비둘기와 AK-47, 면상의 변주곡 같은 기존 단편과 기발한 창작 단편 6편을 모아 읽는 로컬 소설 플랫폼. 오늘의 픽·이어 읽기·장르/분위기 칩·첫 문장으로 고르기·문장 검색, 4가지 테마 리더와 형광펜 3색·한 줄 메모·책갈피, 별점과 독서 통계, 내 단편 집필 에디터와 JSON 백업까지 단일 index.html 하나에 담았습니다.",
+      "categoryId": "creative",
+      "tags": [
+        "소설",
+        "단편",
+        "리더",
+        "형광펜",
+        "단일 index.html"
+      ],
+      "version": "1.0.0",
+      "sourceType": "url",
+      "launchUrl": "https://tarrypotter.github.io/TWP/novel/",
+      "launchMode": "newtab",
+      "isPublished": true,
+      "isFeatured": true,
+      "sortOrder": 13,
+      "createdAt": "2026-11-23T10:40:00+09:00",
+      "updatedAt": "2026-11-23T10:40:00+09:00",
+      "icon": "https://tarrypotter.github.io/TWP/novel/icon-192.png",
+      "thumbnail": "https://tarrypotter.github.io/TWP/novel/icon-512.png"
     }
   ],
   "categories": [
@@ -314,5 +339,5 @@
   ],
   "notices": [],
   "settings": {},
-  "generatedAt": "2026-11-16T04:40:00+09:00"
+  "generatedAt": "2026-11-23T10:40:00+09:00"
 }
